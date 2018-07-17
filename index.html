@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+
+  <title>POKEDEX</title>
+
+</head>
+
+<body id="bodytag">
+
+  <container class="main-grid">
+
+    <div class="header">
+      <h1>Header</h1>
+    </div>
+
+    <div class="div1" onclick="loadPokemon()">
+      <h1>TRAINER KARL</h1>
+    </div>
+
+    <div class="div2">
+      <p><img src="images/pokeball.png" class="pokeball" id="poke1" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon()"> &nbsp;Fred </p>
+      <p><img src="images/pokeball.png" class="pokeball" id="poke2" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon()"> &nbsp;Cathy </p>
+      <p><img src="images/pokeball.png" class="pokeball" id="poke3" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon()"> &nbsp;Bella </p>
+      <p><img src="images/pokeball.png" class="pokeball" id="poke4" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon()"> &nbsp;Greg </p>
+      <p><img src="images/pokeball.png" class="pokeball" id="poke5" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon()"> &nbsp;Menna </p>
+      <p><img src="images/pokeball.png" class="pokeball" id="poke6" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon()"> &nbsp;Jalloopy </p>
+    </div>
+
+    <div class="div3" id="contentbox">
+      <p id="showpokemon">POKEMON INFO GO HERE</p>
+    </div>
+
+    <script src="main.js"></script>
+
+  </container>
+
+
+</body>
+
+</html>

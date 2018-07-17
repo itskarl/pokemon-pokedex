@@ -1,0 +1,77 @@
+html {
+  color: white;
+  font-family: 'Aldrich', sans-serif;
+  margin: 0;
+  background: #f7eaee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+}
+
+p {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.pokeball {
+  height: 50px;
+  width: 50px;
+}
+
+.pokeball:hover {
+  filter:brightness(50%);
+}
+
+.main-grid {
+  /* border-color: tomato;
+  border-style: solid;
+  border-width: 3px; */
+  margin: 200;
+  padding: 10px;
+  display: grid;
+  grid-template-areas:
+  'header header'
+  'trainer pokemon'
+  'pokeballs pokemon';
+
+}
+.header {
+  background-color: skyblue;
+  grid-area: header;
+  padding: 10px;
+
+}
+.div1 {
+  background-color: lightblue;
+  grid-area: trainer;
+  padding: 10px;
+}
+
+.div2 {
+  background-color: pink;
+  grid-area: pokeballs;
+padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.div3 {
+  grid-area: pokemon;
+  background-color: yellow;
+  min-width: 500px;
+  min-height: 500px;
+  background: url("http://www.wallpaperhi.com/thumbnails/detail/20120221/pokemon%20fields%20ruby%201920x1200%20wallpaper_www.wallpaperhi.com_58.jpg");
+  background-size: cover;
+  background-size: cover;padding: 10px;
+
+}
