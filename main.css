@@ -1,4 +1,4 @@
-html {
+body {
   color: white;
   font-family: 'Aldrich', sans-serif;
   margin: 0;
@@ -9,7 +9,8 @@ html {
   background-image: url("images/background.jpg");
   background-position: center;
   background-size: cover;
-  padding: 10px;
+  background-repeat: no-repeat;
+  padding: 0px;
 }
 
 p {
@@ -22,31 +23,31 @@ p {
 .pokeball {
   height: 50px;
   width: 50px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .pokeball:hover {
-  filter:brightness(50%);
+  filter: brightness(130%);
+  transform: translateY(-4px);
 }
 
 .main-grid {
-  /* border-color: tomato;
-  border-style: solid;
-  border-width: 3px; */
-  margin: 200;
-  padding: 10px;
+  width: 100%;
+  margin: none;
+  padding: 0px;
   display: grid;
-  grid-template-areas:
-  'header header'
-  'trainer pokemon'
-  'pokeballs pokemon';
-
+  grid-template-areas: 'header header' 'trainer pokemon' 'pokeballs pokemon';
 }
+
 .header {
   background-color: skyblue;
   grid-area: header;
   padding: 10px;
-
 }
+
 .div1 {
   background-color: lightblue;
   grid-area: trainer;
@@ -56,22 +57,61 @@ p {
 .div2 {
   background-color: pink;
   grid-area: pokeballs;
-padding: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-around;
   flex-wrap: wrap;
-
 }
 
 .div3 {
   grid-area: pokemon;
   background-color: yellow;
-  min-width: 500px;
-  min-height: 500px;
+  margin: 20px;
+  padding: 20px;
+  width: 92%;
+  height: 500px;
   background: url("http://www.wallpaperhi.com/thumbnails/detail/20120221/pokemon%20fields%20ruby%201920x1200%20wallpaper_www.wallpaperhi.com_58.jpg");
   background-size: cover;
-  background-size: cover;padding: 10px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.div3 p {
+  margin: 5px;
+}
+
+.div3 h3 {
+  margin: 5px;
+}
+
+.div3 h1 {
+  margin: 5px;
+}
+
+.statsimg {
+  position: relative;
+  right: 0px;
+  bottom: 100px;
+  overflow: visible;
+  width: 600px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+
+}
+
+.statsinfo {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  z-index: 4;
+  border-radius: 30px;
+  box-shadow: 5 5 5 black;
+  
+  width: 300px;
 
 }
