@@ -42,7 +42,7 @@ function postPokemon1() {
       var pokeimg = document.createElement('img');
       var pokeimg1 = document.getElementById('showimg');
       // pokeimg.src = pokeinfo.sprites.front_default;
-      pokeimg.src = "https://pre00.deviantart.net/512f/th/pre/f/2016/092/d/9/019___rattata_by_pr0xis0ul-d9xhuae.png"
+      pokeimg.src = "images/rattata.png"
       pokeimg1.appendChild(pokeimg);
     }
   }
@@ -170,7 +170,7 @@ function postPokemon4() {
       var pokeimg = document.createElement('img');
       var pokeimg1 = document.getElementById('showimg');
       // pokeimg.src = pokeinfo.sprites.front_default;
-      pokeimg.src = "http://img00.deviantart.net/557f/i/2013/207/3/f/263_zigzagoon_by_pklucario-d6fcz9s.png"
+      pokeimg.src = "images/zigzagoon.png"
       pokeimg1.appendChild(pokeimg);
     }
   }
@@ -213,11 +213,11 @@ function postPokemon5() {
       var pokeimg = document.createElement('img');
       var pokeimg1 = document.getElementById('showimg');
       // pokeimg.src = pokeinfo.sprites.front_default;
-      pokeimg.src = "images/sentret.png"
+      pokeimg.src = "images/patrat.png"
       pokeimg1.appendChild(pokeimg);
     }
   }
-  newcall.open("GET", "https://pokeapi.co/api/v2/pokemon/161", true);
+  newcall.open("GET", "https://pokeapi.co/api/v2/pokemon/504", true);
   newcall.send();
 }
 

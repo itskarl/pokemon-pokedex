@@ -1,14 +1,14 @@
-html{
+body{
   color: white;
   font-family: 'Aldrich', sans-serif;
   margin: 0;
   background: #f7eaee;
-height: 100vh;
-  background-image: url("images/background.jpg");
+  background-image: radial-gradient(transparent, black), url("images/background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0px;
+  overflow: hidden;
 }
 
 p {
@@ -33,24 +33,16 @@ p {
 }
 
 .main-grid {
-  width: 100%;
-  height:100vh;
-  margin: none;
+  margin: 30px;
   padding: 0px;
   display: grid;
-  grid-template-areas: 'header header' 'trainer pokemon' 'pokeballs pokemon';
-}
-
-.header {
-  background-color: skyblue;
-  grid-area: header;
-  padding: 10px;
+  grid-template-areas: 'trainer pokemon' 'pokeballs pokemon';
 }
 
 .div1 {
   background-color: lightblue;
+  height: 20vh;
   grid-area: trainer;
-  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,29 +50,22 @@ p {
 
 .div2 {
   background-color: rgba(0, 0, 0, 0.6);
+  height: 80vh;
   grid-area: pokeballs;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: space;
-  justify-content: space-around;
-  flex-wrap: wrap;
   min-width: 200px;
 }
 
 .div3 {
   grid-area: pokemon;
-  background-color: yellow;
-  margin: 0px;
-  padding: 0px;
-  width: 800px;
-  height: 600px;
+  height: 100vh;
   background: url("http://www.wallpaperhi.com/thumbnails/detail/20120221/pokemon%20fields%20ruby%201920x1200%20wallpaper_www.wallpaperhi.com_58.jpg");
-  background-size: cover;
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .div3 p {
@@ -97,7 +82,7 @@ p {
 
 .statsimg {
   position: relative;
-  left: -50px;
+  left: -200px;
   top: 0px;
   width: 100%;
   margin: 0;
@@ -106,9 +91,9 @@ p {
 
 }
 .statsimg img {
-max-width: 500px;
+max-width: 1000px;
 overflow: hidden;
-max-height: 500px;
+max-height: 1000px;
 
 }
 
