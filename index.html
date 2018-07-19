@@ -7,38 +7,39 @@
 
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+  <link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
   <title>POKEDEX</title>
 
 </head>
 
-<body id="bodytag">
+<body>
 
   <container class="main-grid">
 
-
-    <div class="div1" onclick="loadPokemon()">
+    <div class="div1">
       <h1>TRAINER KARL</h1>
     </div>
 
     <div class="div2">
-      <p><img src="images/pokeball.png" class="pokeball" id="poke1" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon1()"> &nbsp;Agnes </p>
-      <p><img src="images/pokeball.png" class="pokeball" id="poke2" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon6()"> &nbsp;Gertrude </p>
-      <p><img src="images/pokeball.png" class="pokeball" id="poke3" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon3()"> &nbsp;Doris </p>
-      <p><img src="images/pokeball.png" class="pokeball" id="poke4" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon4()"> &nbsp;Mildred</p>
-      <p><img src="images/pokeball.png" class="pokeball" id="poke5" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon5()"> &nbsp;Muriel </p>
-      <p><img src="images/pokeball.png" class="pokeball" id="poke6" onmousedown="release()" onmouseup="unclick()" onclick="postPokemon2()"> &nbsp;Jalloopy </p>
+      <p class="button1"><img src="images/pokeball.png" class="pokeball" id="poke1" onclick="postPokemon1(), revealContent()"> &nbsp;&nbsp;&nbsp;AGNES </p>
+      <p class="button2"><img src="images/pokeball.png" class="pokeball" id="poke2" onclick="postPokemon6(), revealContent()"> &nbsp;&nbsp;&nbsp;GERTRUDE </p>
+      <p class="button3"><img src="images/pokeball.png" class="pokeball" id="poke3" onclick="postPokemon3(), revealContent()"> &nbsp;&nbsp;&nbsp;DORIS </p>
+      <p class="button4"><img src="images/pokeball.png" class="pokeball" id="poke4" onclick="postPokemon4(), revealContent()"> &nbsp;&nbsp;&nbsp;MILDRED</p>
+      <p class="button5"><img src="images/pokeball.png" class="pokeball" id="poke5" onclick="postPokemon5(), revealContent()"> &nbsp;&nbsp;&nbsp;MURIEL</p>
+      <p class="button6"><img src="images/pokeball.png" class="pokeball" id="poke6" onclick="postPokemon2(), revealContent()"> &nbsp;&nbsp;&nbsp;FRED </p>
     </div>
 
     <div class="div3">
       <div class="statsinfo">
-        <p id="showname">CHOOSE YOUR POKEMON!</p><hr><br>
-        <p id="showhp"></p>
+        <p id="showname">CHOOSE YOUR POKEMON</p><hr><br>
+        <p id="showhp">Strong Pokémon. Weak Pokémon. That is only the selfish perception of people. Truly skilled trainers should try to win with their favorites.</p>
         <p id="showatk"></p>
         <p id="showabilities"></p>
       </div>
       <div class="statsimg">
-        <p id="showimg" ></p>
+        <p class="hidden" id="showimg"></p>
       </div>
 
     </div>

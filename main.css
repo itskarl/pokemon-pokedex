@@ -1,4 +1,8 @@
-body{
+html {
+overflow:hidden
+  }
+
+  body{
   color: white;
   font-family: 'Aldrich', sans-serif;
   margin: 0;
@@ -11,16 +15,9 @@ body{
   overflow: hidden;
 }
 
-p {
-  margin: 2px;
-  display: flex;
-  align-items: center;
-  font-size: 1em;
-}
-
 .pokeball {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   -webkit-transition-duration: 0.4s;
   /* Safari */
   transition-duration: 0.4s;
@@ -28,43 +25,84 @@ p {
 }
 
 .pokeball:hover {
-  filter: brightness(130%);
-  transform: translateY(-10px) rotate(360deg) scale(1.2,1.2);
+  transform: translateY(1px) rotate(360deg) scale(1.5,1.5);
 }
 
 .main-grid {
-  margin: 30px;
+  margin: 0px;
   padding: 0px;
   display: grid;
   grid-template-areas: 'trainer pokemon' 'pokeballs pokemon';
 }
 
 .div1 {
-  background-color: lightblue;
+  background-color: rgba(90, 120, 170, 0.6);
   height: 20vh;
   grid-area: trainer;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 300px;
+
 }
 
 .div2 {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(237, 223, 68, 0.4);
   height: 80vh;
   grid-area: pokeballs;
-  padding: 10px;
   display: flex;
   flex-direction: column;
-  min-width: 200px;
+  width: 300px;
+}
+
+.div2 p {
+margin:0;
+padding: 5px 5px 5px 10px;
+display: flex;
+align-items: center;
+transition-duration: 0.4s;
+height: 55px;
+min-height: 55px;
+}
+
+.button1:hover {
+    background-image: radial-gradient(transparent, black), url("images/rattata_but.png");
+    background-position: center;
+    box-shadow: 5px 5px 5px black;
+}
+.button2:hover {
+    background-image: radial-gradient(transparent, black), url("images/bunnelby_but.png");
+    background-position: center;
+    box-shadow: 5px 5px 5px black;
+}
+.button3:hover {
+    background-image: radial-gradient(transparent, black), url("images/bidoof_but.png");
+    background-position: center;
+    box-shadow: 5px 5px 5px black;
+}
+.button4:hover {
+    background-image: radial-gradient(transparent, black), url("images/zigzagoon_but.png");
+    background-position: center;
+    box-shadow: 5px 5px 5px black;
+}
+.button5:hover {
+    background-image: radial-gradient(transparent, black), url("images/patrat_but.png");
+    background-position: center;
+    box-shadow: 5px 5px 5px black;
+}
+.button6:hover {
+    background-image: radial-gradient(transparent, black), url("images/zubat_but.png");
+    background-position: center;
+    box-shadow: 5px 5px 5px black;
 }
 
 .div3 {
   grid-area: pokemon;
   height: 100vh;
-  background: url("http://www.wallpaperhi.com/thumbnails/detail/20120221/pokemon%20fields%20ruby%201920x1200%20wallpaper_www.wallpaperhi.com_58.jpg");
+  background-color: rgba(226, 99, 68, 0.4);
   background-size: cover;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
@@ -80,21 +118,24 @@ p {
   margin: 5px;
 }
 
+.statsinfo {
+  margin-top:200px
+}
+
 .statsimg {
   position: relative;
   left: -200px;
-  top: 0px;
-  width: 100%;
+  top: -200px;
+width: 80vw;
   margin: 0;
   padding: 0;
   z-index: 2;
-
 }
-.statsimg img {
-max-width: 1000px;
-overflow: hidden;
-max-height: 1000px;
 
+.statsimg img {
+max-width: 800px;
+overflow: hidden;
+max-height: 800px;
 }
 
 .statsinfo {
@@ -106,4 +147,16 @@ max-height: 1000px;
   width: 300px;
   position:relative;
   left:20px;
+}
+
+.hidden {
+  opacity: 0;
+    transition: opacity;
+ transition-duration: 2s;
+}
+
+.reveal {
+  opacity: 1;
+  transition: opacity;
+ transition-duration: 2s;
 }

@@ -1,12 +1,27 @@
 console.log("Gotta Catch Em' All")
 
-function release() {
-  document.getElementById('bodytag').style.backgroundColor = "white";
+// function click() {
+//   document.getElementById('bodytag').style.color = "white";
+// }
+//
+// function unclick() {
+//   document.getElementById('bodytag').style.backgroundColor = "";
+// }
+
+function revealContent() {
+  content = document.getElementById('showimg');
+
+  content.classList.remove('hidden');
+  content.classList.add('reveal');
+  content.classList.add('animated');
+  content.classList.add('tada');
+
+  content.classList.add('hidden');
+  // content.classList.remove('reveal');
+  // content.classList.remove('animated');
+  // content.classList.remove('tada');
 }
 
-function unclick() {
-  document.getElementById('bodytag').style.backgroundColor = "";
-}
 
 function postPokemon1() {
   var newcall = new XMLHttpRequest();
@@ -17,7 +32,7 @@ function postPokemon1() {
       document.getElementById("showname").innerHTML = "";
       var pokename = document.createElement("h1");
       var pokename1 = document.getElementById('showname')
-      pokename.textContent = pokeinfo.name;
+      pokename.textContent = pokeinfo.name.toUpperCase();
       pokename1.appendChild(pokename);
 
       document.getElementById("showhp").innerHTML = "";
@@ -59,7 +74,7 @@ function postPokemon2() {
       document.getElementById("showname").innerHTML = "";
       var pokename = document.createElement("h1");
       var pokename1 = document.getElementById('showname')
-      pokename.textContent = pokeinfo.name;
+      pokename.textContent = pokeinfo.name.toUpperCase();
       pokename1.appendChild(pokename);
 
       document.getElementById("showhp").innerHTML = "";
@@ -102,7 +117,7 @@ function postPokemon3() {
       document.getElementById("showname").innerHTML = "";
       var pokename = document.createElement("h1");
       var pokename1 = document.getElementById('showname')
-      pokename.textContent = pokeinfo.name;
+      pokename.textContent = pokeinfo.name.toUpperCase();
       pokename1.appendChild(pokename);
 
       document.getElementById("showhp").innerHTML = "";
@@ -145,7 +160,7 @@ function postPokemon4() {
       document.getElementById("showname").innerHTML = "";
       var pokename = document.createElement("h1");
       var pokename1 = document.getElementById('showname')
-      pokename.textContent = pokeinfo.name;
+      pokename.textContent = pokeinfo.name.toUpperCase();
       pokename1.appendChild(pokename);
 
       document.getElementById("showhp").innerHTML = "";
@@ -188,7 +203,7 @@ function postPokemon5() {
       document.getElementById("showname").innerHTML = "";
       var pokename = document.createElement("h1");
       var pokename1 = document.getElementById('showname')
-      pokename.textContent = pokeinfo.name;
+      pokename.textContent = pokeinfo.name.toUpperCase();
       pokename1.appendChild(pokename);
 
       document.getElementById("showhp").innerHTML = "";
@@ -230,7 +245,7 @@ function postPokemon6() {
       document.getElementById("showname").innerHTML = "";
       var pokename = document.createElement("h1");
       var pokename1 = document.getElementById('showname')
-      pokename.textContent = pokeinfo.name;
+      pokename.textContent = pokeinfo.name.toUpperCase();
       pokename1.appendChild(pokename);
 
       document.getElementById("showhp").innerHTML = "";
