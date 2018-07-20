@@ -3,41 +3,37 @@
 
 <head>
 
+  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="sass.css">
-  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <link rel="stylesheet" href="sass.css">
 
-  <title>POKEDEX</title>
+  <title>Karl Ketchum's Pokedex</title>
 
 </head>
 
-<body>
-  <container class="main-grid container">
-    <div class="div1 col s3 ">
+<body class="container">
+  <div class="row">
+    <div class="div1 col l6 s12">
       <h1>TRAINER KARL</h1>
     </div>
+  </div>
+  <div class="main-grid row">
 
-    <div class="div2 col s3">
-
-      <p class="button1"><img src="images/pokeball.png" class="pokeball" id="poke1" onclick="postPokemon('rattata'), revealContent()"> &nbsp;&nbsp;&nbsp;AGNES </p>
-
-      <p class="button2"><img src="images/pokeball.png" class="pokeball" id="poke2" onclick="postPokemon('bunnelby'), revealContent()"> &nbsp;&nbsp;&nbsp;GERTRUDE </p>
-
-      <p class="button3"><img src="images/pokeball.png" class="pokeball" id="poke3" onclick="postPokemon('bidoof'), revealContent()"> &nbsp;&nbsp;&nbsp;DORIS </p>
-
-      <p class="button4"><img src="images/pokeball.png" class="pokeball" id="poke4" onclick="postPokemon('zigzagoon'), revealContent()"> &nbsp;&nbsp;&nbsp;MILDRED</p>
-
-      <p class="button5"><img src="images/pokeball.png" class="pokeball" id="poke5" onclick="postPokemon('patrat'), revealContent()"> &nbsp;&nbsp;&nbsp;MURIEL</p>
-
-      <p class="button6"><img src="images/pokeball.png" class="pokeball" id="poke6" onclick="postPokemon('zubat'), revealContent()"> &nbsp;&nbsp;&nbsp;FRED </p>
+    <div class="div2 col s12 l3">
+      <div class="button1"><img src="images/pokeball.png" class="pokeball" onclick="postPokemon('rattata'), revealContent()"> &nbsp;&nbsp;&nbsp;AGNES </div>
+      <div class="button2"><img src="images/pokeball.png" class="pokeball" onclick="postPokemon('bunnelby'), revealContent()"> &nbsp;&nbsp;&nbsp;GERTRUDE </div>
+      <div class="button3"><img src="images/pokeball.png" class="pokeball" onclick="postPokemon('bidoof'), revealContent()"> &nbsp;&nbsp;&nbsp;DORIS </div>
+      <div class="button4"><img src="images/pokeball.png" class="pokeball" onclick="postPokemon('zigzagoon'), revealContent()"> &nbsp;&nbsp;&nbsp;MILDRED</div>
+      <div class="button5"><img src="images/pokeball.png" class="pokeball" onclick="postPokemon('patrat'), revealContent()"> &nbsp;&nbsp;&nbsp;MURIEL</div>
+      <div class="button6"><img src="images/pokeball.png" class="pokeball" onclick="postPokemon('zubat'), revealContent()"> &nbsp;&nbsp;&nbsp;FRED </div>
     </div>
 
-    <div class="div3 col s9">
+    <div class="div3 col s12 l9">
       <div class="statsinfo">
         <p id="showname">&#9668; &nbsp; CHOOSE YOUR POKEMON</p>
         <hr><br>
@@ -48,16 +44,12 @@
       <div class="statsimg">
         <img id="showimg"></p>
       </div>
-
     </div>
+  </div>
 
-    <script src="main.js"></script>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-
-  </container>
-
+  <script src="main.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
 </body>
 

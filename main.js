@@ -1,12 +1,12 @@
 console.log("Gotta Catch Em' All")
 
-function click() {
-  document.getElementById('bodytag').style.backgroundColor = "white";
-}
-
-function unclick() {
-  document.getElementById('bodytag').style.backgroundColor = "";
-}
+// function click() {
+//   document.getElementById('bodytag').style.backgroundColor = "white";
+// }
+//
+// function unclick() {
+//   document.getElementById('bodytag').style.backgroundColor = "";
+// }
 
 function revealContent() {
   content = document.getElementById('showimg');
@@ -45,8 +45,6 @@ function postPokemon(name) {
 }
 
 
-
-
 // NOW WITH OBJECTS!!
 // NOW WITH OBJECTS!!
 // NOW WITH OBJECTS!!
@@ -57,22 +55,22 @@ totalPokemon = 0;
 
 myPokemon = {
   bunnelby: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/659"
+    apiLink: "https://pokeapi-nycda.firebaseio.com/pokemon/659.json"
   },
   rattata: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/20"
+    apiLink: "https://pokeapi-nycda.firebaseio.com/pokemon/19.json"
   },
   bidoof: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/399"
+    apiLink: "https://pokeapi-nycda.firebaseio.com/pokemon/399.json"
   },
   zigzagoon: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/263"
+    apiLink: "https://pokeapi-nycda.firebaseio.com/pokemon/263.json"
   },
   patrat: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/504"
+    apiLink: "https://pokeapi-nycda.firebaseio.com/pokemon/504.json"
   },
   zubat: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/41"
+    apiLink: "https://pokeapi-nycda.firebaseio.com/pokemon/41.json"
   },
 }
 
@@ -87,7 +85,7 @@ function createPokemon(name) {
 
       //these lines push to allPokemon
       let Pokemon = {
-        name: pokeinfo.name.toUpperCase(),
+        name: pokeinfo.name,
         hp: pokeinfo.stats[5].base_stat,
         attack: pokeinfo.stats[4].base_stat,
         abilities: [pokeinfo.abilities[0].ability.name, pokeinfo.abilities[1].ability.name]
@@ -107,10 +105,7 @@ createPokemon('zubat');
 createPokemon('bidoof');
 createPokemon('rattata')
 
-
 // AND HERE IS THE TRAINER!
-// AND HERE IS THE TRAINER!
-
 
 trainerKarl = {
   name: "Karl Ketchum",
@@ -118,7 +113,10 @@ trainerKarl = {
   all: function() {
     console.log(allPokemon)
   },
-  // get: function(name) {
-  //   console.log(trainerKarl.allPokemon[name])
-  // },
+  get: function(name) {
+    for (var i =0; i < allPokemon.length; i++)
+     if (allPokemon[i].name === name) {
+        console.log(allPokemon[i])
+     }
+},
 }
