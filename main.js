@@ -15,11 +15,9 @@ function revealContent() {
   content.classList.add('animated');
   content.classList.add('bounceInRight')
 
-
   setTimeout(function() {
 
     content = document.getElementById('showimg');
-
     content.classList.remove('animated');
     content.classList.remove('bounceInRight');
 
@@ -28,7 +26,6 @@ function revealContent() {
 }
 
 function postPokemon(name) {
-    var pokemonName = myPokemon[name];
 
   var newcall = new XMLHttpRequest();
   newcall.onreadystatechange = function() {
@@ -41,12 +38,11 @@ function postPokemon(name) {
       document.getElementById("showimg").src = "images/"+name+".png"
     }
   }
-  newcall.open("GET", pokemonName.apiLink, true);
+  newcall.open("GET", myPokemon[name].apiLink, true);
   newcall.send();
 }
 
 // NOW WITH OBJECTS!!
-
 allPokemon = [];
 totalPokemon = 0;
 
@@ -71,9 +67,7 @@ myPokemon = {
   },
 }
 
-
 function createPokemon(name) {
-  var pokemonName = myPokemon[name];
 
   var newcall = new XMLHttpRequest();
   newcall.onreadystatechange = function() {
@@ -91,7 +85,7 @@ function createPokemon(name) {
       allPokemon.push(Pokemon);
     }
   }
-  newcall.open("GET", pokemonName.apiLink, true);
+  newcall.open("GET", myPokemon[name].apiLink, true);
   newcall.send();
 }
 
@@ -117,3 +111,10 @@ trainerKarl = {
      }
 },
 }
+
+
+//
+
+var element = document.getElementById('showname');
+var text = element.innerText || element.textContent;
+element.innerHTML = text;

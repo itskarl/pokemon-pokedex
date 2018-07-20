@@ -14,13 +14,23 @@
   .div2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    transition-duration: 1s; } }
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px; } }
 
 @media (max-width: 990px) {
   .div2 div {
     z-index: 5; } }
 
 @media (max-width: 990px) {
+  .statsimg img {
+    max-width: 600px;
+    max-height: 600px;
+    position: relative;
+    left: 20px;
+    top: 170px;
+    z-index: 3; } }
+
+@media (max-width: 500px) {
   .statsimg img {
     max-width: 400px;
     max-height: 400px;
@@ -35,5 +45,22 @@
     width: 180px;
     position: relative;
     line-height: 12px; } }
+
+@media (max-width: 990px) {
+  .button2:hover {
+    border-top-right-radius: 20px; } }
+
+@media (max-width: 990px) {
+  .button6:hover {
+    border-bottom-right-radius: 20px; } }
+
+.more-button {
+  padding: 10px 8px 8px 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(45, 45, 45, 0.85);
+  border-radius: 6px;
+  width: 100px; }
 
 /*# sourceMappingURL=sass.css.map */
