@@ -12,17 +12,18 @@ function revealContent() {
   content = document.getElementById('showimg');
 
   content.classList.remove('hidden');
-  content.classList.add('reveal');
   content.classList.add('animated');
-  content.classList.add('tada');
+  content.classList.add('bounceInRight')
+
 
   setTimeout(function() {
 
-    content2 = document.getElementById('showimg');
-    content2.classList.remove('reveal');
-    content2.classList.remove('animated');
-    content2.classList.remove('tada');
-  }, 2000);
+    content = document.getElementById('showimg');
+
+    content.classList.remove('animated');
+    content.classList.remove('bounceInRight');
+
+  }, 1000);
 
 }
 
@@ -44,11 +45,7 @@ function postPokemon(name) {
   newcall.send();
 }
 
-
 // NOW WITH OBJECTS!!
-// NOW WITH OBJECTS!!
-// NOW WITH OBJECTS!!
-
 
 allPokemon = [];
 totalPokemon = 0;

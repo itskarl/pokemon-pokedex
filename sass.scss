@@ -1,0 +1,65 @@
+$desktop: '(min-width: 991px)';
+$medium: '(max-width: 990px)';
+$tiny: '(max-width: 374px)';
+
+p {
+  @media #{$desktop} {
+    font-size: 0.9em;
+  };
+  @media #{$medium} {
+    font-size: 0.7em;
+  }
+}
+
+.pokeball {
+  @media #{$medium} {}
+}
+
+.div2 {
+  @media #{$medium} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.div2 {
+  @media #{$medium} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition-duration: 1s;
+  }
+}
+
+.div2 div {
+  @media #{$medium} {
+    z-index: 5;
+
+  }
+}
+
+.statsimg {
+  @media #{$medium} {
+  // overflow: hidden;
+  }
+}
+
+.statsimg img {
+  @media #{$medium} {
+    max-width: 400px;
+    max-height: 400px;
+    position: relative;
+    left: 20px;
+    top: 250px;
+    z-index: 3;
+  }
+}
+
+.statsinfo {
+  @media #{$medium} {
+    border-top-right-radius: 20px;
+    width: 180px;
+    position: relative;
+    line-height: 12px;
+
+  }
+}
