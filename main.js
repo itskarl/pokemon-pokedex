@@ -116,6 +116,6 @@ trainerKarl = {
 //
 
 
-var texty = document.getElementById('showname').innerHTML
+// var texty = document.getElementById('showname').innerHTML
 
-console.log(texty)
+// console.log(texty)
