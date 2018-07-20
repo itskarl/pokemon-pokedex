@@ -1,5 +1,6 @@
 html {
   line-height: 1em;
+  overflow: hidden;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 }
 
 h1 {
-  font-size: 1.4em;
+  font-size: 1em;
   margin: 0px;
 }
 
@@ -52,6 +53,8 @@ h1 {
   padding: 0 !important;
   transition-duration: 1s;
   box-shadow: 3px -3px 10px black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .div2 div {
@@ -68,6 +71,7 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 2px 2px 10px black;
+    border-top-left-radius: 5px;
 }
 
 .button2:hover {
@@ -103,6 +107,7 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 2px 2px 10px black;
+  border-bottom-left-radius: 5px;
 }
 
 .div3 {
@@ -118,7 +123,7 @@ h1 {
 .statsimg {
   position: relative;
   left: 80px;
-  top: -540px;
+  top: -440px;
   margin: 0;
   padding: 0;
 }
@@ -130,7 +135,7 @@ h1 {
 }
 
 .statsinfo {
-  font-size: 1em;
+  font-size: 1.2em;
   background: rgba(10, 15, 25, 0.85);
   padding: 20px;
   z-index: 4;
@@ -139,6 +144,7 @@ h1 {
   width: 300px;
   position: relative;
   left: 20px;
-  top: 35px;
+  top: 30px;
   box-shadow: -2px -2px 10px black;
+    transition-duration: 1s;
 }

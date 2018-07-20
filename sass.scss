@@ -15,33 +15,28 @@ p {
   @media #{$medium} {}
 }
 
-.div2 {
-  @media #{$medium} {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
 .div2 {
   @media #{$medium} {
+    z-index: 5;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
       border-bottom-right-radius: 30px;
       border-top-right-radius: 30px;
+      z-index: 50;
   }
 }
 
 .div2 div {
   @media #{$medium} {
-    z-index: 5;
+    z-index: 6;
 
   }
 }
 
 .statsimg {
   @media #{$medium} {
-  // overflow: hidden;
+  z-index: 1;
   }
 }
 
@@ -52,7 +47,7 @@ p {
     max-height: 600px;
     position: relative;
     left: 20px;
-    top: 170px;
+    top: 90px;
     z-index: 3;
   }
 }
@@ -62,8 +57,8 @@ p {
     max-width: 400px;
     max-height: 400px;
     position: relative;
-    left: 20px;
-    top: 250px;
+    left: -50px;
+    top: 220px;
     z-index: 3;
   }
 }
@@ -73,20 +68,27 @@ p {
     border-top-right-radius: 20px;
     width: 180px;
     position: relative;
+    top: 20px;
     line-height: 12px;
-
   }
 }
 
-.button2:hover {
-  @media #{$medium} {
-    border-top-right-radius: 20px;
+.statsinfo {
+  @media #{$tiny} {
+    font-size: 12px;
+    width: 130px;
+    position: relative;
+    left: 0px;
+    top: 35px;
+    line-height: 12px;
+    box-shadow: none;
   }
 }
 
-.button6:hover {
+
+.div2 div {
   @media #{$medium} {
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
   }
 }
 

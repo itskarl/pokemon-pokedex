@@ -7,19 +7,20 @@
 
 @media (max-width: 990px) {
   .div2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); } }
-
-@media (max-width: 990px) {
-  .div2 {
+    z-index: 5;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px; } }
+    border-top-right-radius: 30px;
+    z-index: 50; } }
 
 @media (max-width: 990px) {
   .div2 div {
-    z-index: 5; } }
+    z-index: 6; } }
+
+@media (max-width: 990px) {
+  .statsimg {
+    z-index: 1; } }
 
 @media (max-width: 990px) {
   .statsimg img {
@@ -27,7 +28,7 @@
     max-height: 600px;
     position: relative;
     left: 20px;
-    top: 170px;
+    top: 90px;
     z-index: 3; } }
 
 @media (max-width: 500px) {
@@ -35,8 +36,8 @@
     max-width: 400px;
     max-height: 400px;
     position: relative;
-    left: 20px;
-    top: 250px;
+    left: -50px;
+    top: 220px;
     z-index: 3; } }
 
 @media (max-width: 990px) {
@@ -44,15 +45,22 @@
     border-top-right-radius: 20px;
     width: 180px;
     position: relative;
+    top: 20px;
     line-height: 12px; } }
 
-@media (max-width: 990px) {
-  .button2:hover {
-    border-top-right-radius: 20px; } }
+@media (max-width: 500px) {
+  .statsinfo {
+    font-size: 12px;
+    width: 130px;
+    position: relative;
+    left: 0px;
+    top: 35px;
+    line-height: 12px;
+    box-shadow: none; } }
 
 @media (max-width: 990px) {
-  .button6:hover {
-    border-bottom-right-radius: 20px; } }
+  .div2 div {
+    border-radius: 20px; } }
 
 .more-button {
   padding: 10px 8px 8px 8px;

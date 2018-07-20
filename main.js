@@ -115,6 +115,7 @@ trainerKarl = {
 
 //
 
-var element = document.getElementById('showname');
-var text = element.innerText || element.textContent;
-element.innerHTML = text;
+
+var texty = document.getElementById('showname').innerHTML
+
+console.log(texty)
