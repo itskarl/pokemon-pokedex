@@ -13,13 +13,13 @@ function revealContent() {
 
   content.classList.remove('hidden');
   content.classList.add('animated');
-  content.classList.add('bounceInRight')
+  content.classList.add('zoomInDown')
 
   setTimeout(function() {
 
     content = document.getElementById('showimg');
     content.classList.remove('animated');
-    content.classList.remove('bounceInRight');
+    content.classList.remove('zoomInDown');
 
   }, 1000);
 
@@ -35,7 +35,7 @@ function postPokemon(name) {
       document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
       document.getElementById("showatk").innerHTML = " ATTACK: " + pokeinfo.stats[4].base_stat;
       document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name + ", " + pokeinfo.abilities[1].ability.name;
-      document.getElementById("showimg").src = "images/"+name+".png"
+      document.getElementById("showimg").src = "images/" + name + ".png"
     }
   }
   newcall.open("GET", myPokemon[name].apiLink, true);
@@ -66,6 +66,9 @@ myPokemon = {
     apiLink: "https://pokeapi-nycda.firebaseio.com/pokemon/41.json"
   },
 }
+
+
+
 
 function createPokemon(name) {
 
@@ -105,17 +108,103 @@ trainerKarl = {
     console.log(allPokemon)
   },
   get: function(name) {
-    for (var i =0; i < allPokemon.length; i++)
-     if (allPokemon[i].name === name) {
+    for (var i = 0; i < allPokemon.length; i++)
+      if (allPokemon[i].name === name) {
         console.log(allPokemon[i])
-     }
-},
+      }
+  },
+}
+
+//experimental stuff begins here
+//experimental stuff begins here
+//experimental stuff begins here
+
+
+//CREATING A masterList
+//this creates a pull from all the API numbers
+
+masterList = []
+
+function masterPokemon(idNumber) {
+
+  let apiLink = "https://pokeapi-nycda.firebaseio.com/pokemon/" + idNumber + ".json";
+
+  var newcall = new XMLHttpRequest();
+  newcall.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var pokeinfo = JSON.parse(this.responseText);
+
+      let Pokemon = {
+        name: pokeinfo.name,
+        hp: pokeinfo.stats[5].base_stat,
+        attack: pokeinfo.stats[4].base_stat,
+        ability: pokeinfo.abilities[0].ability.name,
+        id: pokeinfo.id,
+      }
+      masterList.push(Pokemon);
+    }
+  }
+  newcall.open("GET", apiLink, true);
+  newcall.send();
+}
+
+//this pulls ALL the POKEMON
+
+function catchEmAll() {
+  for (var masterIndex = 1; masterIndex <= 30; masterIndex++) {
+    masterPokemon(masterIndex)
+  };
+
+    alert("Loading full Pokedex! This may be a minute or two. Please be patient");
 }
 
 
-//
+function masterPullFromMasterList(name) {
+  for (var i = 0; i < masterList.length; i++)
+    if (masterList[i].name === name) {
+      console.log(masterList[i])
+    }
+}
 
+function masterRelease() {
+  // this sets input to pokeRequest
+  let pokeRequest = pokesubmit.elements.pokename.value.toLowerCase();
 
-// var texty = document.getElementById('showname').innerHTML
+  for (var i = 0; i < masterList.length; i++)
+    if (masterList[i].name === pokeRequest) {
+      var newcall = new XMLHttpRequest();
+      newcall.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var pokeinfo = JSON.parse(this.responseText);
 
-// console.log(texty)
+          document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase();
+          document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
+          document.getElementById("showatk").innerHTML = " ATTACK: " + pokeinfo.stats[4].base_stat;
+          document.getElementById("showabilities").innerHTML = "ABILITY: " + pokeinfo.abilities[0].ability.name;
+
+          //code to pull picture from official pokemon site
+          // found this js online to make digits 3 digits
+          Number.prototype.pad = function(size) {
+            var s = String(this);
+            while (s.length < (size || 2)) {
+              s = "0" + s;
+            }
+            return s;
+          }
+          //
+
+          for (var i = 0; i < masterList.length; i++)
+            if (masterList[i].name === pokeRequest)
+              document.getElementById("showimg").src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + masterList[i].id.pad(3) + ".png"
+
+          //wow pulling that image was hard
+
+        }
+      }
+    }
+  for (var i = 0; i < masterList.length; i++)
+    if (masterList[i].name === pokeRequest) {
+      newcall.open("GET", "https://pokeapi-nycda.firebaseio.com/pokemon/" + masterList[i].id + ".json", true);
+      newcall.send();
+    }
+}

@@ -8,7 +8,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css?family=Aldrich|Rajdhani" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Aldrich|Rajdhani" rel="stylesheet">
+
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="sass.css">
 
@@ -21,6 +22,15 @@
     <div class="div1 col l6 s12">
       <h1 class="trainername">TRAINER KARL</h1>
     </div>
+
+    <div class="professoroak col l6 s12">
+      <form id="pokesubmit" name="pokesubmit" class="formbox">
+        <input type="text" id="pokename" placeholder="enter pokemon name" onkeypress="return masterRelease()" />
+        <img src="images/pokedex.png" class="icon" onclick="catchEmAll()" alt="load pokedex!">
+        <img src="images/professoroak.png" class="icon" onclick="masterRelease(), revealContent()">
+      </form>
+    </div>
+
   </div>
   <div class="main-grid row">
 
@@ -33,7 +43,7 @@
       <div class="button6"><img src="images/pokeball.png" class="pokeball" onclick="postPokemon('zubat'), revealContent()"> &nbsp;&nbsp;&nbsp;FRED </div>
     </div>
 
-    <div class="div3 col s12 l9">
+    <div class="col s12 l9 div3">
       <div class="statsinfo">
         <h1 id="showname">CHOOSE YOUR POKEMON</h1>
         <hr>
