@@ -150,25 +150,28 @@ function masterPokemon(idNumber) {
 
 //this pulls ALL the POKEMON
 
-function catchEmAll() {
-  for (var masterIndex = 1; masterIndex <= 30; masterIndex++) {
-    masterPokemon(masterIndex)
-  };
+var catchEmAll = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            for (var masterIndex = 1; masterIndex <= 802; masterIndex++) {
+              masterPokemon(masterIndex)
+            };
 
-    alert("Loading full Pokedex! This may be a minute or two. Please be patient");
-}
+              alert("Loading full Pokedex! This may take a minute or two. Once loaded, you can request any pokemon here.");
+        }
+    };
+})();
+
+//
 
 
-function masterPullFromMasterList(name) {
-  for (var i = 0; i < masterList.length; i++)
-    if (masterList[i].name === name) {
-      console.log(masterList[i])
-    }
-}
 
 function masterRelease() {
+
   // this sets input to pokeRequest
-  let pokeRequest = pokesubmit.elements.pokename.value.toLowerCase();
+  let pokeRequest = pokename.value.toLowerCase();
 
   for (var i = 0; i < masterList.length; i++)
     if (masterList[i].name === pokeRequest) {
@@ -183,7 +186,7 @@ function masterRelease() {
           document.getElementById("showabilities").innerHTML = "ABILITY: " + pokeinfo.abilities[0].ability.name;
 
           //code to pull picture from official pokemon site
-          // found this js online to make digits 3 digits
+          // found this js online to make id number always 3 digits
           Number.prototype.pad = function(size) {
             var s = String(this);
             while (s.length < (size || 2)) {

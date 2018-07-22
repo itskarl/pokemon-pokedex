@@ -1,3 +1,5 @@
+
+
 html {
   line-height: 1em;
   overflow: hidden;
@@ -8,7 +10,7 @@ body {
   font-family: 'Rajdhani', sans-serif;
   margin: 0;
   background: #f7eaee;
-  background-image: radial-gradient(transparent, black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg");
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,7 +49,7 @@ h1 {
   background-image: url("images/headerbackground.png");
   background-position: right;
   background-repeat: no-repeat;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 10px;
   border-bottom-left-radius: 20px;
 }
 
@@ -137,7 +139,7 @@ color: white;
 .statsimg {
   position: relative;
   left: 22%;
-  top: -300px;
+  top: -200px;
   margin: 0;
   padding: 0;
 

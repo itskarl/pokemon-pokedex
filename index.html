@@ -23,12 +23,12 @@
       <h1 class="trainername">TRAINER KARL</h1>
     </div>
 
-    <div class="professoroak col l6 s12">
-      <form id="pokesubmit" name="pokesubmit" class="formbox">
-        <input type="text" id="pokename" placeholder="enter pokemon name" onkeypress="return masterRelease()" />
+    <div class="col l6 s12 formbox">
+      <div class="professoroak">
+        <input type="text" id="pokename" placeholder="enter pokemon name" onKeyDown="if(event.keyCode==13)masterRelease(),revealContent()" autocomplete="off"/>
         <img src="images/pokedex.png" class="icon" onclick="catchEmAll()" alt="load pokedex!">
         <img src="images/professoroak.png" class="icon" onclick="masterRelease(), revealContent()">
-      </form>
+      </div>
     </div>
 
   </div>
