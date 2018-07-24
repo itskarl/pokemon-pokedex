@@ -19,7 +19,8 @@ body {
 }
 
 .trainername {
-  font-size: 1.4em;
+  font-size: 1.7em;
+  font-weight: bold;
   margin: 20% 5px 15px 20px;
   transition: 1s;
   float: left;
@@ -73,7 +74,7 @@ color: white;
 }
 
 .div2 div {
-  padding: 5px 5px 5px 15px;
+  padding: 2vh 5px 5px 15px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -146,13 +147,14 @@ color: white;
 }
 
 .statsimg img {
-  max-width: 700px;
+  width: 600px;
   transition: 1s;
   z-index: 3;
 }
 
 .statsinfo {
-  font-size: 1.2em;
+  font-size: 1.3em;
+  line-height: 1;
   background: rgba(10, 15, 25, 0.55);
   padding: 20px;
   z-index: 4;
