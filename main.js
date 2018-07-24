@@ -1,4 +1,4 @@
-console.log("Gotta Catch Em' All")
+console.log("Gotta Catch Em' All!!!")
 
 // function click() {
 //   document.getElementById('bodytag').style.backgroundColor = "white";
