@@ -122,7 +122,7 @@ trainerKarl = {
 
 //CREATING A masterList
 //this creates a pull from all the API numbers
-
+/*Dear Karl, great job. Per our conversation it's possible to use \pokemonName to make an API request. Maybe this will save a few lines of (already elegant) code. Who knows? -Brian*/
 masterList = []
 
 function masterPokemon(idNumber) {
