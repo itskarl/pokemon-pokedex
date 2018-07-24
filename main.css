@@ -10,7 +10,15 @@ body {
   font-family: 'Rajdhani', sans-serif;
   margin: 0;
   background: #f7eaee;
-  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg");
+  /* background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg"); */
+/*2018.7.24 Personally I think these also look cool. Maybe change with each Pokemon?*/
+  /* background-image: radial-gradient(transparent, rgba(255, 255, 255, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg"); */
+  background-image: radial-gradient(transparent, rgba(255, 255, 0, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg");
+  /* background-image: radial-gradient(transparent, rgba(0, 255, 255, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg"); */
+  /* background-image: radial-gradient(transparent, rgba(255, 0, 255, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg"); */
+  /* background-image: radial-gradient(transparent, rgba(255, 0, 0, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg"); */
+  /* background-image: radial-gradient(transparent, rgba(0, 0, 255, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg"); */
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,7 +48,7 @@ h1 {
 }
 
 .pokeball:hover {
-  transform: translateY(1px) rotate(360deg) scale(1.3, 1.3);
+  transform: translateY(1px) rotate(1440deg) scale(16.0, 6.0); /*Changed scale from 1.3 and added three spins*/
 }
 
 .div1 {
