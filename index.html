@@ -25,9 +25,9 @@
 
     <div class="col l6 s12 formbox">
       <div class="professoroak">
-        <input id="pokename" placeholder="enter pokemon name" onKeyDown="if(event.keyCode==13)masterRelease(),revealContent()" autocomplete="off" />
+        <input id="pokename" placeholder="enter pokemon name" onKeyDown="if(event.keyCode==13)masterRelease()" autocomplete="off" />
 
-        <img src="images/professoroak.png" class="icon" onclick="masterRelease(), revealContent()">
+        <img src="images/professoroak.png" class="icon" onclick="masterRelease()">
       </div>
     </div>
 
@@ -37,18 +37,58 @@
     <div class="div2 col s12 l3">
       <div>
         <h1>YOUR POKEMON</h1></div>
+
       <div id="pokelist" class="pokelist row">
       </div>
     </div>
 
     <div class="col s12 l9 div3">
-      <div class="statsinfo">
+      <div class="nooverflowbox">
+      <div class="statsinfo" id="statsinfo">
         <h1 id="showname">CHOOSE YOUR POKEMON</h1>
         <hr>
-        <p id="showhp">Strong Pokémon. Weak Pokémon. That is only the selfish perception of people. Truly skilled trainers should try to win with their favorites. <br><br>- Elite Four Karen</p>
-        <p id="showatk"></p>
+
+        <div id="maxhp">
+          <div id="hpbar">
+            <p id="showhp"></p>
+          </div>
+        </div>
+
+
+        <div id="maxatk">
+          <div id="atkbar">
+            <p id="showatk"></p>
+          </div>
+        </div>
+
+        <div id="maxspatk">
+          <div id="spatkbar">
+            <p id="showspatk"></p>
+          </div>
+        </div>
+
+        <div id="maxdef">
+          <div id="defbar">
+            <p id="showdef"></p>
+          </div>
+        </div>
+
+        <div id="maxspdef">
+          <div id="spdefbar">
+            <p id="showspdef"></p>
+          </div>
+        </div>
+
+        <div id="maxspeed">
+          <div id="speedbar">
+            <p id="showspeed"></p>
+          </div>
+        </div>
+        <hr>
+
         <p id="showabilities"></p>
       </div>
+    </div>
       <div class="statsimg">
         <img id="showimg"></p>
       </div>

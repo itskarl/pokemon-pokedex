@@ -1,123 +1,102 @@
 console.log("Gotta Catch Em' All!!!")
 
-// function click() {
-//   document.getElementById('bodytag').style.backgroundColor = "white";
+
+
+//
+//
+// function postPokemon(name) {
+//
+//   var newcall = new XMLHttpRequest();
+//   newcall.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       var pokeinfo = JSON.parse(this.responseText);
+//       document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase();
+//       document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
+//       document.getElementById("showatk").innerHTML = " ATTACK: " + pokeinfo.stats[4].base_stat;
+//       document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name + ", " + pokeinfo.abilities[1].ability.name;
+//       document.getElementById("showimg").src = "images/" + name + ".png"
+//     }
+//   }
+//   newcall.open("GET", myPokemon[name].apiLink, true);
+//   newcall.send();
 // }
 //
-// function unclick() {
-//   document.getElementById('bodytag').style.backgroundColor = "";
+// // NOW WITH OBJECTS!!
+// allPokemon = [];
+// totalPokemon = 0;
+//
+// myPokemon = {
+//   bunnelby: {
+//     apiLink: "https://pokeapi.co/api/v2/pokemon/659.json"
+//   },
+//   rattata: {
+//     apiLink: "https://pokeapi.co/api/v2/pokemon/19.json"
+//   },
+//   bidoof: {
+//     apiLink: "https://pokeapi.co/api/v2/pokemon/399.json"
+//   },
+//   zigzagoon: {
+//     apiLink: "https://pokeapi.co/api/v2/pokemon/263.json"
+//   },
+//   patrat: {
+//     apiLink: "https://pokeapi.co/api/v2/pokemon/504.json"
+//   },
+//   zubat: {
+//     apiLink: "https://pokeapi.co/api/v2/pokemon/41.json"
+//   },
 // }
-
-function revealContent() {
-  content = document.getElementById('showimg');
-
-  content.classList.remove('hidden');
-  content.classList.add('animated');
-  content.classList.add('zoomInDown')
-
-  setTimeout(function() {
-
-    content = document.getElementById('showimg');
-    content.classList.remove('animated');
-    content.classList.remove('zoomInDown');
-
-  }, 1000);
-
-}
-
-function postPokemon(name) {
-
-  var newcall = new XMLHttpRequest();
-  newcall.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var pokeinfo = JSON.parse(this.responseText);
-      document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase();
-      document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
-      document.getElementById("showatk").innerHTML = " ATTACK: " + pokeinfo.stats[4].base_stat;
-      document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name + ", " + pokeinfo.abilities[1].ability.name;
-      document.getElementById("showimg").src = "images/" + name + ".png"
-    }
-  }
-  newcall.open("GET", myPokemon[name].apiLink, true);
-  newcall.send();
-}
-
-// NOW WITH OBJECTS!!
-allPokemon = [];
-totalPokemon = 0;
-
-myPokemon = {
-  bunnelby: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/659.json"
-  },
-  rattata: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/19.json"
-  },
-  bidoof: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/399.json"
-  },
-  zigzagoon: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/263.json"
-  },
-  patrat: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/504.json"
-  },
-  zubat: {
-    apiLink: "https://pokeapi.co/api/v2/pokemon/41.json"
-  },
-}
-
-
-
-
-function createPokemon(name) {
-
-  var newcall = new XMLHttpRequest();
-  newcall.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var pokeinfo = JSON.parse(this.responseText);
-
-      //these lines push to allPokemon
-      let Pokemon = {
-        name: pokeinfo.name,
-        hp: pokeinfo.stats[5].base_stat,
-        attack: pokeinfo.stats[4].base_stat,
-        abilities: [pokeinfo.abilities[0].ability.name, pokeinfo.abilities[1].ability.name]
-      }
-      totalPokemon++;
-      allPokemon.push(Pokemon);
-    }
-  }
-  newcall.open("GET", myPokemon[name].apiLink, true);
-  newcall.send();
-}
-
-createPokemon('bunnelby');
-createPokemon('zigzagoon');
-createPokemon('patrat');
-createPokemon('zubat');
-createPokemon('bidoof');
-createPokemon('rattata')
-
-// AND HERE IS THE TRAINER!
-
-trainerKarl = {
-  name: "Karl Ketchum",
-  Pokemon: allPokemon,
-  all: function() {
-    console.log(allPokemon)
-  },
-  get: function(name) {
-    for (var i = 0; i < allPokemon.length; i++)
-      if (allPokemon[i].name === name) {
-        console.log(allPokemon[i])
-      }
-  },
-}
-
-//experimental stuff begins here
-//experimental stuff begins here
-//experimental stuff begins here
+//
+//
+//
+//
+// function createPokemon(name) {
+//
+//   var newcall = new XMLHttpRequest();
+//   newcall.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       var pokeinfo = JSON.parse(this.responseText);
+//
+//       //these lines push to allPokemon
+//       let Pokemon = {
+//         name: pokeinfo.name,
+//         hp: pokeinfo.stats[5].base_stat,
+//         attack: pokeinfo.stats[4].base_stat,
+//         abilities: [pokeinfo.abilities[0].ability.name, pokeinfo.abilities[1].ability.name]
+//       }
+//       totalPokemon++;
+//       allPokemon.push(Pokemon);
+//     }
+//   }
+//   newcall.open("GET", myPokemon[name].apiLink, true);
+//   newcall.send();
+// }
+//
+// createPokemon('bunnelby');
+// createPokemon('zigzagoon');
+// createPokemon('patrat');
+// createPokemon('zubat');
+// createPokemon('bidoof');
+// createPokemon('rattata')
+//
+// // AND HERE IS THE TRAINER!
+//
+// trainerKarl = {
+//   name: "Karl Ketchum",
+//   Pokemon: allPokemon,
+//   all: function() {
+//     console.log(allPokemon)
+//   },
+//   get: function(name) {
+//     for (var i = 0; i < allPokemon.length; i++)
+//       if (allPokemon[i].name === name) {
+//         console.log(allPokemon[i])
+//       }
+//   },
+// }
+//
+// //experimental stuff begins here
+// //experimental stuff begins here
+// //experimental stuff begins here
 
 
 //CREATING A masterList
@@ -161,7 +140,7 @@ Number.prototype.pad = function(size) {
 function masterRelease() {
 
   // this sets input from input "pokename" to pokeRequest
-  let pokeRequest = pokename.value
+  let pokeRequest = pokename.value.toLowerCase();
   masterPokemon(pokeRequest);
 
   var newcall = new XMLHttpRequest();
@@ -169,26 +148,89 @@ function masterRelease() {
     if (this.readyState == 4 && this.status == 200) {
       var pokeinfo = JSON.parse(this.responseText);
 
-      document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase();
+
+
+      // this prints all the data
+
+        setTimeout(function() {
+
+      document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase() + "  (#" + pokeinfo.id + ")";
       document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
-      document.getElementById("showatk").innerHTML = " ATTACK: " + pokeinfo.stats[4].base_stat;
-      document.getElementById("showabilities").innerHTML = "ABILITY: " + pokeinfo.abilities[0].ability.name;
+      document.getElementById("showatk").innerHTML = " ATK: " + pokeinfo.stats[4].base_stat;
+      document.getElementById("showspatk").innerHTML = " SP.ATK: " + pokeinfo.stats[2].base_stat;
+      document.getElementById("showdef").innerHTML = " DEF: " + pokeinfo.stats[3].base_stat;
+      document.getElementById("showspdef").innerHTML = " SP.DEF: " + pokeinfo.stats[1].base_stat;
+      document.getElementById("showspeed").innerHTML = " SPEED " + pokeinfo.stats[0].base_stat;
+
+      //this sees the number of abilities and prints available number of abilities
+
+      if (pokeinfo.abilities[2] !== undefined) {
+        document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name.toUpperCase() + ", " + pokeinfo.abilities[1].ability.name.toUpperCase() + ", " + pokeinfo.abilities[2].ability.name.toUpperCase();
+      } else if (pokeinfo.abilities[1] !== undefined) {
+        document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name.toUpperCase() + ", " + pokeinfo.abilities[1].ability.name.toUpperCase();
+      } else {
+        document.getElementById("showabilities").innerHTML = "ABILITY:  " + pokeinfo.abilities[0].ability.name.toUpperCase();
+      }
+
+    }, 1500);
 
 
-      var pokename = document.createElement("p");
-      var pokename1 = document.getElementById('pokelist')
+      // creates sprites and pokemon to the side
+
+      var pokename1 = document.getElementById('pokelist');
+      var pokediv = document.createElement('div');
+      pokename1.appendChild(pokediv)
+      pokediv.className = "pokediv";
+
+      var pokesprite = document.createElement("img");
+      pokesprite.src = pokeinfo.sprites.front_default;
+      pokediv.appendChild(pokesprite);
+      pokesprite.className = "sprites";
+
+      var pokename = document.createElement("a");
       pokename.textContent = pokeinfo.name.toUpperCase();
-      pokename1.appendChild(pokename);
-      pokename.className ="col s12 l9";
+      pokediv.appendChild(pokename);
 
-      // var pokename = document.createElement("hr");
-      // var pokename1 = document.getElementById('pokelist')
-      // pokename1.appendChild(pokename);
+      // creates attribute bars
+      //hp
 
+      document.getElementById("hpbar").style.width = ((pokeinfo.stats[5].base_stat / 255) * 100) + "%";
+      document.getElementById("atkbar").style.width = ((pokeinfo.stats[4].base_stat / 255) * 100) + "%";
+      document.getElementById("spatkbar").style.width = ((pokeinfo.stats[2].base_stat / 255) * 100) + "%";
+      document.getElementById("defbar").style.width = ((pokeinfo.stats[3].base_stat / 255) * 100) + "%";
+      document.getElementById("spdefbar").style.width = ((pokeinfo.stats[1].base_stat / 255) * 100) + "%";
+      document.getElementById("speedbar").style.width = ((pokeinfo.stats[0].base_stat / 255) * 100) + "%";
 
+      //pull picture from official pokemon website
 
+      document.getElementById("showimg").src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + pokeinfo.id.pad(3) + ".png";
 
-        document.getElementById("showimg").src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + pokeinfo.id.pad(3) + ".png";
+      // this adds the random animation onload
+
+      var animationArray = ['zoomInDown', 'bounce', 'rubberBand', 'fadeInLeft', 'fadeInRight', 'flipInX', 'lightSpeedIn', 'rotateIn', 'zoomIn', 'wobble']
+      var animationPick = animationArray[Math.floor(Math.random() * animationArray.length)];
+
+      content = document.getElementById('showimg');
+
+      content.classList.remove('hidden');
+      content.classList.add('animated');
+      content.classList.add(animationPick)
+
+      setTimeout(function() {
+
+        content = document.getElementById('showimg');
+        content.classList = "";
+
+      }, 1000);
+
+      // animated slide in info
+
+      document.getElementById('statsinfo').classList.add('expand');
+
+      setTimeout(function() {
+        document.getElementById('statsinfo').classList.remove('expand')
+      }, 3000);
+
 
 
     }
