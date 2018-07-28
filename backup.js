@@ -148,20 +148,13 @@ function masterPokemon(idNumber) {
   newcall.send();
 }
 
-//to make all things 3 digits for request
-Number.prototype.pad = function(size) {
-  var s = String(this);
-  while (s.length < (size || 2)) {
-    s = "0" + s;
-  }
-  return s;
-}
+let pokeRequest = pokename.value.toLowerCase();
 
 
 function masterRelease() {
 
   // this sets input from input "pokename" to pokeRequest
-  let pokeRequest = pokename.value
+  let pokeRequest = pokename.value.toLowerCase();
   masterPokemon(pokeRequest);
 
   var newcall = new XMLHttpRequest();
@@ -179,16 +172,31 @@ function masterRelease() {
       var pokename1 = document.getElementById('pokelist')
       pokename.textContent = pokeinfo.name.toUpperCase();
       pokename1.appendChild(pokename);
-      pokename.className ="col s12 l9";
 
-      // var pokename = document.createElement("hr");
-      // var pokename1 = document.getElementById('pokelist')
-      // pokename1.appendChild(pokename);
-
-
+      var pokename = document.createElement("p");
+      var pokename1 = document.getElementById('pokelist')
+      pokename.textContent = pokeinfo.name.toUpperCase();
+      pokename1.appendChild(pokename);
 
 
-        document.getElementById("showimg").src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + pokeinfo.id.pad(3) + ".png";
+      Number.prototype.pad = function(size) {
+        var s = String(this);
+        while (s.length < (size || 2)) {
+          s = "0" + s;
+        }
+        return s;
+      }
+      //
+
+      if (isNaN(pokename.value))
+      {
+        for (var i = 0; i < masterList.length; i++)
+          if (masterList[i].name === pokeRequest)
+        document.getElementById("showimg").src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + masterList[i].id.pad(3) + ".png"
+      } else      {
+
+            document.getElementById("showimg").src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + pokeRequest + ".png"
+      }
 
 
     }
