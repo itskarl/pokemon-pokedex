@@ -1,6 +1,11 @@
 console.log("Gotta Catch Em' All!!!")
 
 
+setTimeout(function() {
+  document.getElementById('oakbox').classList.remove('hidden');
+  document.getElementById('oakbox').classList.add('animated');
+  document.getElementById('oakbox').classList.add('slideInDown')
+}, 650);
 
 //
 //
@@ -127,7 +132,10 @@ function masterPokemon(idNumber) {
   newcall.send();
 }
 
+
 //to make all things 3 digits for request
+
+
 Number.prototype.pad = function(size) {
   var s = String(this);
   while (s.length < (size || 2)) {
@@ -136,6 +144,10 @@ Number.prototype.pad = function(size) {
   return s;
 }
 
+function randomPoke() {
+  pokename.value = Math.floor(Math.random() * 802);
+  masterRelease()
+}
 
 function masterRelease() {
 
@@ -148,31 +160,37 @@ function masterRelease() {
     if (this.readyState == 4 && this.status == 200) {
       var pokeinfo = JSON.parse(this.responseText);
 
+      //clear the intro
+
+      setTimeout(function() {
+        document.getElementById('intro').innerHTML = "";
+        document.getElementById('databars').classList.remove('nodisplay');
+      }, 1500);
 
 
       // this prints all the data
 
-        setTimeout(function() {
+      setTimeout(function() {
 
-      document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase() + "  (#" + pokeinfo.id + ")";
-      document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
-      document.getElementById("showatk").innerHTML = " ATK: " + pokeinfo.stats[4].base_stat;
-      document.getElementById("showspatk").innerHTML = " SP.ATK: " + pokeinfo.stats[2].base_stat;
-      document.getElementById("showdef").innerHTML = " DEF: " + pokeinfo.stats[3].base_stat;
-      document.getElementById("showspdef").innerHTML = " SP.DEF: " + pokeinfo.stats[1].base_stat;
-      document.getElementById("showspeed").innerHTML = " SPEED " + pokeinfo.stats[0].base_stat;
+        document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase() + "  (#" + pokeinfo.id + ")";
+        document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
+        document.getElementById("showatk").innerHTML = " ATK: " + pokeinfo.stats[4].base_stat;
+        document.getElementById("showspatk").innerHTML = " SP.ATK: " + pokeinfo.stats[2].base_stat;
+        document.getElementById("showdef").innerHTML = " DEF: " + pokeinfo.stats[3].base_stat;
+        document.getElementById("showspdef").innerHTML = " SP.DEF: " + pokeinfo.stats[1].base_stat;
+        document.getElementById("showspeed").innerHTML = " SPEED " + pokeinfo.stats[0].base_stat;
 
-      //this sees the number of abilities and prints available number of abilities
+        //this sees the number of abilities and prints available number of abilities
 
-      if (pokeinfo.abilities[2] !== undefined) {
-        document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name.toUpperCase() + ", " + pokeinfo.abilities[1].ability.name.toUpperCase() + ", " + pokeinfo.abilities[2].ability.name.toUpperCase();
-      } else if (pokeinfo.abilities[1] !== undefined) {
-        document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name.toUpperCase() + ", " + pokeinfo.abilities[1].ability.name.toUpperCase();
-      } else {
-        document.getElementById("showabilities").innerHTML = "ABILITY:  " + pokeinfo.abilities[0].ability.name.toUpperCase();
-      }
+        if (pokeinfo.abilities[2] !== undefined) {
+          document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name.toUpperCase() + ", " + pokeinfo.abilities[1].ability.name.toUpperCase() + ", " + pokeinfo.abilities[2].ability.name.toUpperCase();
+        } else if (pokeinfo.abilities[1] !== undefined) {
+          document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name.toUpperCase() + ", " + pokeinfo.abilities[1].ability.name.toUpperCase();
+        } else {
+          document.getElementById("showabilities").innerHTML = "ABILITY:  " + pokeinfo.abilities[0].ability.name.toUpperCase();
+        }
 
-    }, 1500);
+      }, 1500);
 
 
       // creates sprites and pokemon to the side
@@ -180,7 +198,7 @@ function masterRelease() {
       var pokename1 = document.getElementById('pokelist');
       var pokediv = document.createElement('div');
       pokename1.appendChild(pokediv)
-      pokediv.className = "pokediv";
+      pokediv.className = "pokediv animated bounceInLeft";
 
       var pokesprite = document.createElement("img");
       pokesprite.src = pokeinfo.sprites.front_default;
@@ -194,12 +212,16 @@ function masterRelease() {
       // creates attribute bars
       //hp
 
-      document.getElementById("hpbar").style.width = ((pokeinfo.stats[5].base_stat / 255) * 100) + "%";
-      document.getElementById("atkbar").style.width = ((pokeinfo.stats[4].base_stat / 255) * 100) + "%";
-      document.getElementById("spatkbar").style.width = ((pokeinfo.stats[2].base_stat / 255) * 100) + "%";
-      document.getElementById("defbar").style.width = ((pokeinfo.stats[3].base_stat / 255) * 100) + "%";
-      document.getElementById("spdefbar").style.width = ((pokeinfo.stats[1].base_stat / 255) * 100) + "%";
-      document.getElementById("speedbar").style.width = ((pokeinfo.stats[0].base_stat / 255) * 100) + "%";
+      setTimeout(function() {
+
+        document.getElementById("hpbar").style.width = ((pokeinfo.stats[5].base_stat / 255) * 100) + "%";
+        document.getElementById("atkbar").style.width = ((pokeinfo.stats[4].base_stat / 255) * 100) + "%";
+        document.getElementById("spatkbar").style.width = ((pokeinfo.stats[2].base_stat / 255) * 100) + "%";
+        document.getElementById("defbar").style.width = ((pokeinfo.stats[3].base_stat / 255) * 100) + "%";
+        document.getElementById("spdefbar").style.width = ((pokeinfo.stats[1].base_stat / 255) * 100) + "%";
+        document.getElementById("speedbar").style.width = ((pokeinfo.stats[0].base_stat / 255) * 100) + "%";
+
+      }, 1500);
 
       //pull picture from official pokemon website
 
@@ -223,13 +245,19 @@ function masterRelease() {
 
       }, 1000);
 
-      // animated slide in info
+      // animated slide in info bars
 
       document.getElementById('statsinfo').classList.add('expand');
 
       setTimeout(function() {
         document.getElementById('statsinfo').classList.remove('expand')
       }, 3000);
+
+      //reveals the "yourpokemon" section
+
+      document.getElementById('yourpokemon').classList.remove('hidden');
+      document.getElementById('yourpokemon').classList.add('animated');
+      document.getElementById('yourpokemon').classList.add('fadeIn');
 
 
 

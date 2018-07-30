@@ -1,19 +1,19 @@
-g html {
+html {
   line-height: 1em;
-  overflow: hidden;
+  height: 100%;
 }
 
 body {
   color: white;
   font-family: 'Rajdhani', sans-serif;
   margin: 0;
-  background: #f7eaee;
   background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0px;
-  height: 100vh;
+  height: 100%;
+  overflow:hidden;
 }
 
 .trainername {
@@ -28,7 +28,7 @@ h1 {
   margin: 0px;
 }
 
-.pokeball {
+/* .pokeball {
   height: 40px;
   width: 40px;
   transition-duration: 0.4s;
@@ -37,7 +37,7 @@ h1 {
 
 .pokeball:hover {
   transform: translateY(1px) rotate(360deg) scale(1.3, 1.3);
-}
+} */
 
 .div1 {
   background-color: rgba(80, 80, 80);
@@ -48,15 +48,14 @@ h1 {
   background-repeat: no-repeat;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 20px;
+  position: relative;
+  z-index: 8;
 }
 
 .professoroak {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-  line-height: 1em;
-  color: white;
+  width: 80%;
+  padding: 8px;
 }
 
 .div2 {
@@ -71,7 +70,7 @@ h1 {
 }
 
 .div2::-webkit-scrollbar {
-  width: 1em;
+  width: .6em;
 }
 
 .div2::-webkit-scrollbar-track {
@@ -79,15 +78,16 @@ h1 {
 }
 
 .div2::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background-color: #4c2e34;
+  outline: 0px solid #331b20;
 }
 
-.div2 div h1 {
-  padding-top: 20px;
+#yourpokemon {
+  padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  border-bottom-color: white;
+  border-bottom-style: solid;
 }
 
 .button1:hover {
@@ -146,8 +146,8 @@ h1 {
 
 .statsimg {
   position: relative;
-      left: 33%;
-      top: -380px;
+  left: 33%;
+  top: -380px;
 }
 
 .statsimg img {
@@ -158,7 +158,7 @@ h1 {
 
 .statsinfo {
   font-size: 1em;
-  background: rgba(10, 15, 25, 0.35);
+  background: rgba(10, 15, 25, 0.55);
   padding: 20px;
   z-index: 4;
   border-radius: 0 0 6px 0;
@@ -166,8 +166,9 @@ h1 {
   width: 300px;
   position: relative;
   left: 0;
-  top: 30px;
+  top: 55px;
   transition-duration: .5s;
+  box-shadow: 2px 2px 4px black;
 }
 
 .statsinfo p {
@@ -215,7 +216,7 @@ h1 {
 
 #hpbar p {
   white-space: nowrap;
-  padding-left: 1em;
+  padding: 5px;
 }
 
 #maxatk {
@@ -231,7 +232,7 @@ h1 {
 
 #atkbar p {
   white-space: nowrap;
-  padding-left: 1em;
+  padding: 5px;
 }
 
 #maxspatk {
@@ -247,7 +248,7 @@ h1 {
 
 #spatkbar p {
   white-space: nowrap;
-  padding-left: 1em;
+  padding: 5px;
 }
 
 #maxspatk {
@@ -263,7 +264,7 @@ h1 {
 
 #spatkbar p {
   white-space: nowrap;
-  padding-left: 1em;
+  padding: 5px;
 }
 
 #maxdef {
@@ -279,7 +280,7 @@ h1 {
 
 #defbar p {
   white-space: nowrap;
-  padding-left: 1em;
+  padding: 5px;
 }
 
 #maxspdef {
@@ -295,7 +296,7 @@ h1 {
 
 #spdefbar p {
   white-space: nowrap;
-  padding-left: 1em;
+  padding: 5px;
 }
 
 #maxspeed {
@@ -311,24 +312,86 @@ h1 {
 
 #speedbar p {
   white-space: nowrap;
-  padding-left: 1em;
+  padding: 5px;
 }
 
-
 @keyframes grow {
-  0% {left: 0px; }
-  50% {left:-300px;}
-  100% {left: 0px; }
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: -300px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 
 .expand {
   animation-name: grow;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
-
 }
 
 .nooverflowbox {
-  overflow:hidden;
-  height:100%
+  overflow: hidden;
+  height: 100%
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.nodisplay {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+  background-color: rgba(100, 40, 28, 0.7);
+  font-size: 1em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: .9em;
+  padding: 0 20px;
+  border-top: 2px solid rgb(130, 130, 130, 0.4);
+
+}
+
+ul:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 15px solid rgb(130, 130, 130, 0.4);
+  border-left: 15px solid rgb(100, 40, 40, 0.5);
+  width: 0;
+}
+
+
+li a, li p {
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 8px;
+  font-size: 1em;
+}
+
+li a:hover {
+  background-color: rgb(140, 30, 30, 0.7);
+}
+
+#outtro {
+font-size: .8em;
+line-height: .8em;
+text-align: right;
+opacity: .6;
 }

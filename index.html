@@ -19,15 +19,16 @@
 
 <body class="container main-box">
   <div class="row ">
-    <div class="div1 col l6 s12">
+    <div class="div1 col l6 s12 animated slideInDown">
       <h1 class="trainername">YOUR PERSONAL POKEDEX</h1>
     </div>
 
-    <div class="col l6 s12 formbox">
-      <div class="professoroak">
+    <div class="col l6 s12 formbox hidden" id="oakbox">
+      <div class="professoroak " >
         <input id="pokename" placeholder="enter pokemon name" onKeyDown="if(event.keyCode==13)masterRelease()" autocomplete="off" />
 
         <img src="images/professoroak.png" class="icon" onclick="masterRelease()">
+        <img src="images/pokeball.png" class="icon" onclick="randomPoke()">
       </div>
     </div>
 
@@ -36,7 +37,7 @@
 
     <div class="div2 col s12 l3">
       <div>
-        <h1>YOUR POKEMON</h1></div>
+        <h1 id="yourpokemon" class="hidden">YOUR POKEMON</h1></div>
 
       <div id="pokelist" class="pokelist row">
       </div>
@@ -44,51 +45,63 @@
 
     <div class="col s12 l9 div3">
       <div class="nooverflowbox">
-      <div class="statsinfo" id="statsinfo">
-        <h1 id="showname">CHOOSE YOUR POKEMON</h1>
-        <hr>
+        <div class="statsinfo" id="statsinfo">
+          <h1 id="showname">CHOOSE YOUR POKEMON</h1>
+          <hr>
+          <div id="intro" style="white-space:normal;">
+            <p>Welcome to Karl's Pokedex. Your simple, modern pokedex. Start by typing in any pokemon name or id number at the top.
+          Don't know any pokemon names? Simply click the pokeball to get a random pokemon!</p><br>
+        </div>
+        <div id="databars" class="nodisplay">
+          <div id="maxhp">
+            <div id="hpbar">
+              <p id="showhp"></p>
+            </div>
+          </div>
 
-        <div id="maxhp">
-          <div id="hpbar">
-            <p id="showhp"></p>
+
+          <div id="maxatk">
+            <div id="atkbar">
+              <p id="showatk"></p>
+            </div>
+          </div>
+
+          <div id="maxspatk">
+            <div id="spatkbar">
+              <p id="showspatk"></p>
+            </div>
+          </div>
+
+          <div id="maxdef">
+            <div id="defbar">
+              <p id="showdef"></p>
+            </div>
+          </div>
+
+          <div id="maxspdef">
+            <div id="spdefbar">
+              <p id="showspdef"></p>
+            </div>
+          </div>
+
+          <div id="maxspeed">
+            <div id="speedbar">
+              <p id="showspeed"></p>
+            </div>
           </div>
         </div>
+          <hr>
 
-
-        <div id="maxatk">
-          <div id="atkbar">
-            <p id="showatk"></p>
-          </div>
+          <p id="showabilities"></p>
         </div>
 
-        <div id="maxspatk">
-          <div id="spatkbar">
-            <p id="showspatk"></p>
-          </div>
-        </div>
+        <div class="type1box">
 
-        <div id="maxdef">
-          <div id="defbar">
-            <p id="showdef"></p>
-          </div>
         </div>
+        <div class="type2box">
 
-        <div id="maxspdef">
-          <div id="spdefbar">
-            <p id="showspdef"></p>
-          </div>
         </div>
-
-        <div id="maxspeed">
-          <div id="speedbar">
-            <p id="showspeed"></p>
-          </div>
-        </div>
-        <hr>
-
-        <p id="showabilities"></p>
       </div>
-    </div>
       <div class="statsimg">
         <img id="showimg" src=""></p>
       </div>
@@ -96,16 +109,22 @@
     </div>
   </div>
 
-<footer>
-  API provided by pokemon api,
-  images from pokemon.com
-  grid framework provided by materialize css
-  animation from animate.css
-</footer>
+
   <script src="main.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
 </body>
+<div>
+  <footer>
+    <p id="outtro">created by Karl Rodulfo for the <a href="https://nycda.com/">NYCDA </a>SEI 2018 Class with the following resources:<p>
+    <ul>
 
+      <li><a href="https://pokeapi.co/">POKE API</a></li>
+      <li><a href="http://pokemon.com">POKEMON.COM</a></li>
+      <li><a href="https://materializecss.com/">MATERIALIZE</a></li>
+      <li><a href="https://daneden.github.io/animate.css/">ANIMATE.CSS</a></li>
+    </ul>
+  </footer>
+</div>
 </html>
