@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
   padding: 0px;
   height: 100%;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .trainername {
@@ -166,7 +166,7 @@ h1 {
   width: 300px;
   position: relative;
   left: 0;
-  top: 55px;
+  top: -40px;
   transition-duration: .5s;
   box-shadow: 2px 2px 4px black;
 }
@@ -333,6 +333,42 @@ h1 {
   animation-timing-function: ease-in-out;
 }
 
+@keyframes dropdown {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.expanddown {
+  animation-name: dropdown;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes dropdown2 {
+  0% {
+    top: -50px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
+.expanddown2 {
+  animation-name: dropdown2;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-in-out;
+}
+
 .nooverflowbox {
   overflow: hidden;
   height: 100%
@@ -348,20 +384,11 @@ h1 {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
   z-index: 4;
-  background-color: rgba(100, 40, 28, 0.7);
-  font-size: 1em;
+  font-size: .7em;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  font-size: .9em;
-  padding: 0 20px;
   border-top: 2px solid rgb(130, 130, 130, 0.4);
-
+  opacity: .7;
 }
 
 ul:before {
@@ -374,7 +401,6 @@ ul:before {
   width: 0;
 }
 
-
 li a, li p {
   display: block;
   color: #fff;
@@ -383,6 +409,7 @@ li a, li p {
   margin: 0;
   padding: 8px;
   font-size: 1em;
+  width: 80px;
 }
 
 li a:hover {
@@ -390,8 +417,51 @@ li a:hover {
 }
 
 #outtro {
-font-size: .8em;
-line-height: .8em;
-text-align: right;
-opacity: .6;
+  font-size: .8em;
+  line-height: .9em;
+  text-align: left;
+  opacity: .7;
+  padding: 0 0 0 20px;
+  position: relative
+}
+
+.helpbox {
+  height: 100px;
+}
+
+
+#typebox1 {
+  background-color: rgba(200, 200, 200, 0.35);
+  height: 50px;
+  width: 100px;
+  border-radius: 0 0 7px 7px;
+  position: relative;
+  left: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px 5px black;
+
+}
+
+#typebox1 img {
+  width: 90px;
+  display: block;
+  margin: 0 auto;
+}
+
+#typebox2 {
+  background-color: rgba(200, 200, 200, 0.35);
+  height: 50px;
+  width: 100px;
+  border-radius: 0 0 7px 7px;
+  position: relative;
+    padding: 5px;
+  left: 110px;
+  top: -50px;
+    box-shadow: 2px 2px 5px black;
+}
+
+#typebox2 img {
+  width: 90px;
+  display: block;
+  margin: 0 auto;
 }
