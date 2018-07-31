@@ -7,101 +7,6 @@ setTimeout(function() {
   document.getElementById('oakbox').classList.add('slideInDown')
 }, 650);
 
-//
-//
-// function postPokemon(name) {
-//
-//   var newcall = new XMLHttpRequest();
-//   newcall.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//       var pokeinfo = JSON.parse(this.responseText);
-//       document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase();
-//       document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
-//       document.getElementById("showatk").innerHTML = " ATTACK: " + pokeinfo.stats[4].base_stat;
-//       document.getElementById("showabilities").innerHTML = "ABILITIES: " + pokeinfo.abilities[0].ability.name + ", " + pokeinfo.abilities[1].ability.name;
-//       document.getElementById("showimg").src = "images/" + name + ".png"
-//     }
-//   }
-//   newcall.open("GET", myPokemon[name].apiLink, true);
-//   newcall.send();
-// }
-//
-// // NOW WITH OBJECTS!!
-// allPokemon = [];
-// totalPokemon = 0;
-//
-// myPokemon = {
-//   bunnelby: {
-//     apiLink: "https://pokeapi.co/api/v2/pokemon/659.json"
-//   },
-//   rattata: {
-//     apiLink: "https://pokeapi.co/api/v2/pokemon/19.json"
-//   },
-//   bidoof: {
-//     apiLink: "https://pokeapi.co/api/v2/pokemon/399.json"
-//   },
-//   zigzagoon: {
-//     apiLink: "https://pokeapi.co/api/v2/pokemon/263.json"
-//   },
-//   patrat: {
-//     apiLink: "https://pokeapi.co/api/v2/pokemon/504.json"
-//   },
-//   zubat: {
-//     apiLink: "https://pokeapi.co/api/v2/pokemon/41.json"
-//   },
-// }
-//
-//
-//
-//
-// function createPokemon(name) {
-//
-//   var newcall = new XMLHttpRequest();
-//   newcall.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//       var pokeinfo = JSON.parse(this.responseText);
-//
-//       //these lines push to allPokemon
-//       let Pokemon = {
-//         name: pokeinfo.name,
-//         hp: pokeinfo.stats[5].base_stat,
-//         attack: pokeinfo.stats[4].base_stat,
-//         abilities: [pokeinfo.abilities[0].ability.name, pokeinfo.abilities[1].ability.name]
-//       }
-//       totalPokemon++;
-//       allPokemon.push(Pokemon);
-//     }
-//   }
-//   newcall.open("GET", myPokemon[name].apiLink, true);
-//   newcall.send();
-// }
-//
-// createPokemon('bunnelby');
-// createPokemon('zigzagoon');
-// createPokemon('patrat');
-// createPokemon('zubat');
-// createPokemon('bidoof');
-// createPokemon('rattata')
-//
-// // AND HERE IS THE TRAINER!
-//
-// trainerKarl = {
-//   name: "Karl Ketchum",
-//   Pokemon: allPokemon,
-//   all: function() {
-//     console.log(allPokemon)
-//   },
-//   get: function(name) {
-//     for (var i = 0; i < allPokemon.length; i++)
-//       if (allPokemon[i].name === name) {
-//         console.log(allPokemon[i])
-//       }
-//   },
-// }
-//
-// //experimental stuff begins here
-// //experimental stuff begins here
-// //experimental stuff begins here
 
 
 //CREATING A masterList
@@ -259,6 +164,128 @@ function masterRelease() {
       document.getElementById('yourpokemon').classList.add('animated');
       document.getElementById('yourpokemon').classList.add('fadeIn');
 
+      //this section prints out pokemon types
+
+      //the slidedown animation
+      document.getElementById('typebox1').classList.add('expanddown');
+
+      setTimeout(function() {
+        document.getElementById('typebox1').classList.remove('expanddown');
+
+      }, 1500);
+
+      setTimeout(function() {
+        document.getElementById('typebox1').classList.remove('hidden')
+
+        if (pokeinfo.types[0].type.name === "flying") {
+          document.getElementById('type1').src = "images/flying.png"
+        } else if (pokeinfo.types[0].type.name === "fairy") {
+          document.getElementById('type1').src = "images/fairy.png"
+        } else if (pokeinfo.types[0].type.name === "dragon") {
+          document.getElementById('type1').src = "images/dragon.png"
+        } else if (pokeinfo.types[0].type.name === "steel") {
+          document.getElementById('type1').src = "images/steel.png"
+        } else if (pokeinfo.types[0].type.name === "rock") {
+          document.getElementById('type1').src = "images/rock.png"
+        } else if (pokeinfo.types[0].type.name === "bug") {
+          document.getElementById('type1').src = "images/bug.png"
+        } else if (pokeinfo.types[0].type.name === "ghost") {
+          document.getElementById('type1').src = "images/ghost.png"
+        } else if (pokeinfo.types[0].type.name === "dark") {
+          document.getElementById('type1').src = "images/dark.png"
+        } else if (pokeinfo.types[0].type.name === "psychic") {
+          document.getElementById('type1').src = "images/psychic.png"
+        } else if (pokeinfo.types[0].type.name === "fighting") {
+          document.getElementById('type1').src = "images/fighting.png"
+        } else if (pokeinfo.types[0].type.name === "ground") {
+          document.getElementById('type1').src = "images/ground.png"
+        } else if (pokeinfo.types[0].type.name === "poison") {
+          document.getElementById('type1').src = "images/poison.png"
+        } else if (pokeinfo.types[0].type.name === "ice") {
+          document.getElementById('type1').src = "images/ice.png"
+        } else if (pokeinfo.types[0].type.name === "electric") {
+          document.getElementById('type1').src = "images/electric.png"
+        } else if (pokeinfo.types[0].type.name === "grass") {
+          document.getElementById('type1').src = "images/grass.png"
+        } else if (pokeinfo.types[0].type.name === "water") {
+          document.getElementById('type1').src = "images/water.png"
+        } else if (pokeinfo.types[0].type.name === "fire") {
+          document.getElementById('type1').src = "images/fire.png"
+        } else if (pokeinfo.types[0].type.name === "normal") {
+          document.getElementById('type1').src = "images/normal.png"
+        } else {
+          console.log("no type")
+        }
+      }, 750);
+
+      //type2
+
+
+      setTimeout(function() {
+
+        document.getElementById('typebox2').classList.add('expanddown2');
+
+        setTimeout(function() {
+          document.getElementById('typebox2').classList.remove('expanddown2')
+        }, 1500);
+
+
+        if (pokeinfo.types[1] == undefined) {
+
+
+          setTimeout(function() {
+            document.getElementById('typebox2').classList.add('hidden');
+            document.getElementById('type2').src = "";
+          }, 750);
+
+          console.log("no 2nd type")
+
+        } else {
+          setTimeout(function() {
+            document.getElementById('typebox2').classList.remove('hidden')
+
+            if (pokeinfo.types[1].type.name === "flying") {
+              document.getElementById('type2').src = "images/flying.png"
+            } else if (pokeinfo.types[1].type.name === "fairy") {
+              document.getElementById('type2').src = "images/fairy.png"
+            } else if (pokeinfo.types[1].type.name === "dragon") {
+              document.getElementById('type2').src = "images/dragon.png"
+            } else if (pokeinfo.types[1].type.name === "steel") {
+              document.getElementById('type2').src = "images/steel.png"
+            } else if (pokeinfo.types[1].type.name === "rock") {
+              document.getElementById('type2').src = "images/rock.png"
+            } else if (pokeinfo.types[1].type.name === "bug") {
+              document.getElementById('type2').src = "images/bug.png"
+            } else if (pokeinfo.types[1].type.name === "ghost") {
+              document.getElementById('type2').src = "images/ghost.png"
+            } else if (pokeinfo.types[1].type.name === "dark") {
+              document.getElementById('type2').src = "images/dark.png"
+            } else if (pokeinfo.types[1].type.name === "psychic") {
+              document.getElementById('type2').src = "images/psychic.png"
+            } else if (pokeinfo.types[1].type.name === "fighting") {
+              document.getElementById('type2').src = "images/fighting.png"
+            } else if (pokeinfo.types[1].type.name === "ground") {
+              document.getElementById('type2').src = "images/ground.png"
+            } else if (pokeinfo.types[1].type.name === "poison") {
+              document.getElementById('type2').src = "images/poison.png"
+            } else if (pokeinfo.types[1].type.name === "ice") {
+              document.getElementById('type2').src = "images/ice.png"
+            } else if (pokeinfo.types[1].type.name === "electric") {
+              document.getElementById('type2').src = "images/electric.png"
+            } else if (pokeinfo.types[1].type.name === "grass") {
+              document.getElementById('type2').src = "images/grass.png"
+            } else if (pokeinfo.types[1].type.name === "water") {
+              document.getElementById('type2').src = "images/water.png"
+            } else if (pokeinfo.types[1].type.name === "fire") {
+              document.getElementById('type2').src = "images/fire.png"
+            } else if (pokeinfo.types[1].type.name === "normal") {
+              document.getElementById('type2').src = "images/normal.png"
+            }
+          }, 750);
+        }
+
+
+      }, 750);
 
 
     }
