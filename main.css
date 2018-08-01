@@ -55,7 +55,7 @@ h1 {
 .professoroak {
   display: flex;
   width: 80%;
-  padding: 8px;
+  padding: 15px;
 }
 
 .div2 {
@@ -204,7 +204,7 @@ h1 {
 }
 
 #maxhp {
-  background-color: rgb(132, 200, 132, 0.3);
+  background-color: rgb(132, 200, 132, 0.15);
   width: 100%;
 }
 
@@ -220,7 +220,7 @@ h1 {
 }
 
 #maxatk {
-  background-color: rgb(200, 132, 132, 0.3);
+  background-color: rgb(200, 132, 132, 0.15);
   width: 100%;
 }
 
@@ -236,7 +236,7 @@ h1 {
 }
 
 #maxspatk {
-  background-color: rgb(132, 132, 200, 0.3);
+  background-color: rgb(132, 132, 200, 0.15);
   width: 100%;
 }
 
@@ -252,7 +252,7 @@ h1 {
 }
 
 #maxspatk {
-  background-color: rgb(132, 132, 200, 0.3);
+  background-color: rgb(132, 132, 200, 0.15);
   width: 100%;
 }
 
@@ -268,7 +268,7 @@ h1 {
 }
 
 #maxdef {
-  background-color: rgb(200, 200, 132, 0.3);
+  background-color: rgb(200, 200, 132, 0.15);
   width: 100%;
 }
 
@@ -284,7 +284,7 @@ h1 {
 }
 
 #maxspdef {
-  background-color: rgb(132, 200, 200, 0.3);
+  background-color: rgb(132, 200, 200, 0.15);
   width: 100%;
 }
 
@@ -300,7 +300,7 @@ h1 {
 }
 
 #maxspeed {
-  background-color: rgb(200, 132, 132, 0.3);
+  background-color: rgb(200, 132, 132, 0.15);
   width: 100%;
 }
 
@@ -421,7 +421,7 @@ li a:hover {
   line-height: .9em;
   text-align: left;
   opacity: .7;
-  padding: 0 0 0 20px;
+  padding: 5% 0 0 16px;
   position: relative
 }
 
