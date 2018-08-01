@@ -26,12 +26,12 @@ p {
 
 .div2 {
   @media #{$medium} {
-    border-top-right-radius: 30px;
+    border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
     height: 100%;
     transition-duration: 1s;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }
 
@@ -43,32 +43,45 @@ p {
 
 .div2 div {
   @media #{$medium} {
-    display: flex;
-        padding: 0px 8px 0 0px;
     transition-duration: 1s;
     z-index: 6;
   }
 }
 
-.sprites{
+.pokelist {
   @media #{$medium} {
-    width:30px
-  }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 90px;
+    margin: 0;
+}
 }
 
+.pokediv{
+  @media #{$medium} {
+  height: 100%;
+  margin:0
+}
+}
+
+
+.sprites {
+  @media #{$medium} {
+    width: 30px;
+  }
+}
 
 .div1 {
   @media #{$medium} {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   }
 }
 
 .div1 {
   @media #{$tiny} {
     border-bottom-left-radius: 0;
-
   }
 }
 
@@ -76,7 +89,7 @@ p {
   @media #{$tiny} {
     border-top-right-radius: 20px;
     border-top-left-radius: 0;
-    box-shadow: 0px -2px 5px rgba(0,0,0,0.7);
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.7);
   }
 }
 
@@ -84,8 +97,9 @@ p {
   @media #{$medium} {
     border-top-right-radius: 0;
     border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
     height: 1px;
-    box-shadow: 0px -2px 0px rgba(200,200,200,0.7);
+    box-shadow: 0 -2px 0 rgba(200,200,200,0.7);
   }
 }
 
@@ -130,10 +144,9 @@ p {
     border-top-right-radius: 20px;
     width: 40%;
     position: relative;
-    bottom: 50px;
+    top: -30px;
     line-height: 12px;
     padding: 14px;
-
   }
 }
 
@@ -141,12 +154,9 @@ p {
   @media #{$tiny} {
     font-size: 12px;
     width: 50%;
-    position: relative;
-    left: 0;
-    bottom: 50px;
     line-height: 12px;
     box-shadow: none;
-      padding: 14px;
+    padding: 14px;
   }
 }
 
@@ -224,13 +234,13 @@ p {
 
 #outtro {
   @media #{$tiny} {
-    font-size: .6em
+    font-size: 0.6em;
   }
 }
 
 li {
   @media #{$tiny} {
-    font-size: .8em
+    font-size: 0.8em;
   }
 }
 
@@ -241,14 +251,56 @@ li {
   cursor: pointer;
 }
 
-
-
 .formbox input {
-    @media #{$tiny} {
-      font-size: 1em
+  @media #{$tiny} {
+    font-size: 1em;
   }
 }
 
 .icon:hover {
   transform: translateY(5px) rotate(15deg) scale(1.3, 1.3);
+}
+
+
+
+
+#typebox1 {
+  @media #{$medium} {
+    height: 40px;
+    width: 80px;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    left: 5px;
+    padding: 4px;
+    box-shadow: 1px 1px 4px black;
+  }
+}
+
+#typebox1 img {
+  @media #{$medium} {
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+#typebox2 {
+  @media #{$medium} {
+    height: 40px;
+    width: 80px;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    padding: 4px;
+    left: 90px;
+    top: -40px;
+    box-shadow: 1px 1px 3px black;
+  }
+}
+
+#typebox2 img {
+  @media #{$medium} {
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+  }
 }

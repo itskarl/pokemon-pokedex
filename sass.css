@@ -16,12 +16,12 @@
 
 @media (max-width: 992px) {
   .div2 {
-    border-top-right-radius: 30px;
+    border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
     height: 100%;
     transition-duration: 1s;
-    overflow-x: scroll;
-    overflow-y: hidden; } }
+    overflow-x: hidden;
+    overflow-y: scroll; } }
 
 @media (max-width: 992px) {
   #yourpokemon {
@@ -29,10 +29,20 @@
 
 @media (max-width: 992px) {
   .div2 div {
-    display: flex;
-    padding: 0px 8px 0 0px;
     transition-duration: 1s;
     z-index: 6; } }
+
+@media (max-width: 992px) {
+  .pokelist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 90px;
+    margin: 0; } }
+
+@media (max-width: 992px) {
+  .pokediv {
+    height: 100%;
+    margin: 0; } }
 
 @media (max-width: 992px) {
   .sprites {
@@ -52,14 +62,15 @@
   .div2 {
     border-top-right-radius: 20px;
     border-top-left-radius: 0;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.7); } }
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7); } }
 
 @media (max-width: 992px) {
   .div3 {
     border-top-right-radius: 0;
     border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
     height: 1px;
-    box-shadow: 0px -2px 0px rgba(200, 200, 200, 0.7); } }
+    box-shadow: 0 -2px 0 rgba(200, 200, 200, 0.7); } }
 
 @media (max-width: 500px) {
   .div3 {
@@ -92,7 +103,7 @@
     border-top-right-radius: 20px;
     width: 40%;
     position: relative;
-    bottom: 50px;
+    top: -30px;
     line-height: 12px;
     padding: 14px; } }
 
@@ -100,9 +111,6 @@
   .statsinfo {
     font-size: 12px;
     width: 50%;
-    position: relative;
-    left: 0;
-    bottom: 50px;
     line-height: 12px;
     box-shadow: none;
     padding: 14px; } }
@@ -174,5 +182,38 @@
 
 .icon:hover {
   transform: translateY(5px) rotate(15deg) scale(1.3, 1.3); }
+
+@media (max-width: 992px) {
+  #typebox1 {
+    height: 40px;
+    width: 80px;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    left: 5px;
+    padding: 4px;
+    box-shadow: 1px 1px 4px black; } }
+
+@media (max-width: 992px) {
+  #typebox1 img {
+    width: 70px;
+    display: block;
+    margin: 0 auto; } }
+
+@media (max-width: 992px) {
+  #typebox2 {
+    height: 40px;
+    width: 80px;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    padding: 4px;
+    left: 90px;
+    top: -40px;
+    box-shadow: 1px 1px 3px black; } }
+
+@media (max-width: 992px) {
+  #typebox2 img {
+    width: 70px;
+    display: block;
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=sass.css.map */

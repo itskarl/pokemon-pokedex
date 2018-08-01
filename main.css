@@ -431,7 +431,7 @@ li a:hover {
 
 
 #typebox1 {
-  background-color: rgba(200, 200, 200, 0.35);
+  background-color: rgba(120, 120, 120, 0.45);
   height: 50px;
   width: 100px;
   border-radius: 0 0 7px 7px;
@@ -449,7 +449,7 @@ li a:hover {
 }
 
 #typebox2 {
-  background-color: rgba(200, 200, 200, 0.35);
+  background-color: rgba(120, 120, 120, 0.45);
   height: 50px;
   width: 100px;
   border-radius: 0 0 7px 7px;
