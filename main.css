@@ -189,8 +189,8 @@ h1 {
   display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
-
   justify-content: space-between;
+
 }
 
 .pokediv a {
@@ -198,18 +198,18 @@ h1 {
 }
 
 .pokediv:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   transition-duration: .2s;
   cursor: pointer;
 }
 
-#maxhp {
+.maxhp {
   background-color: rgb(132, 200, 132, 0.15);
   width: 100%;
 }
 
 #hpbar {
-  background-color: rgb(50, 140, 50, 0.8);
+  background-color: rgba(50, 140, 50, 0.8);
   width: 0%;
   animation-duration: 2s;
 }
@@ -471,6 +471,11 @@ li a:hover {
   padding: 10px;
   right: 0px;
   font-size: 2em;
+  transition-duration: .3s;
+}
+
+.closebutton:hover {
+  font-size: 3em;
 }
 
 #flavortextbox {
