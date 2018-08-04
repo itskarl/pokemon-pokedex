@@ -203,8 +203,8 @@ h1 {
   cursor: pointer;
 }
 
-.maxhp {
-  background-color: rgb(132, 200, 132, 0.15);
+#maxhp {
+  background-color: rgba(132, 200, 132, 0.15);
   width: 100%;
 }
 
@@ -220,12 +220,12 @@ h1 {
 }
 
 #maxatk {
-  background-color: rgb(200, 132, 132, 0.15);
+  background-color: rgba(200, 132, 132, 0.15);
   width: 100%;
 }
 
 #atkbar {
-  background-color: rgb(140, 50, 50, 0.8);
+  background-color: rgba(140, 50, 50, 0.8);
   width: 0%;
   animation-duration: 2s;
 }
@@ -236,12 +236,12 @@ h1 {
 }
 
 #maxspatk {
-  background-color: rgb(132, 132, 200, 0.15);
+  background-color: rgba(132, 132, 200, 0.15);
   width: 100%;
 }
 
 #spatkbar {
-  background-color: rgb(50, 50, 140, 0.8);
+  background-color: rgba(50, 50, 140, 0.8);
   width: 0%;
   animation-duration: 2s;
 }
@@ -252,12 +252,12 @@ h1 {
 }
 
 #maxspatk {
-  background-color: rgb(132, 132, 200, 0.15);
+  background-color: rgba(132, 132, 200, 0.15);
   width: 100%;
 }
 
 #spatkbar {
-  background-color: rgb(50, 50, 140, 0.8);
+  background-color: rgba(50, 50, 140, 0.8);
   width: 0%;
   animation-duration: 2s;
 }
@@ -268,12 +268,12 @@ h1 {
 }
 
 #maxdef {
-  background-color: rgb(200, 200, 132, 0.15);
+  background-color: rgba(200, 200, 132, 0.15);
   width: 100%;
 }
 
 #defbar {
-  background-color: rgb(140, 140, 50, 0.8);
+  background-color: rgba(140, 140, 50, 0.8);
   width: 0%;
   animation-duration: 2s;
 }
@@ -284,12 +284,12 @@ h1 {
 }
 
 #maxspdef {
-  background-color: rgb(132, 200, 200, 0.15);
+  background-color: rgba(132, 200, 200, 0.15);
   width: 100%;
 }
 
 #spdefbar {
-  background-color: rgb(50, 140, 140, 0.8);
+  background-color: rgba(50, 140, 140, 0.8);
   width: 0%;
   animation-duration: 2s;
 }
@@ -300,12 +300,12 @@ h1 {
 }
 
 #maxspeed {
-  background-color: rgb(200, 132, 132, 0.15);
+  background-color: rgba(200, 132, 132, 0.15);
   width: 100%;
 }
 
 #speedbar {
-  background-color: rgb(140, 50, 140, 0.8);
+  background-color: rgba(140, 50, 140, 0.8);
   width: 0%;
   animation-duration: 2s;
 }
