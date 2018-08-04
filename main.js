@@ -8,9 +8,8 @@ setTimeout(function() {
 }, 650);
 
 
-
+spritecount = 0;
 //CREATING A masterList
-//this creates a pull from all the API numbers
 
 masterList = []
 
@@ -114,6 +113,25 @@ function masterRelease() {
       pokename.textContent = pokeinfo.name.toUpperCase();
       pokediv.appendChild(pokename);
 
+      // the close button
+      var closebutton = document.createElement('div');
+      var xbtn = document.createTextNode('\xD7');
+      closebutton.appendChild(xbtn);
+      closebutton.className = "closebutton"
+      pokediv.appendChild(closebutton);
+
+      closebutton.id = "closebutton" + spritecount;
+      pokediv.id = "pokediv" +spritecount;
+
+      document.getElementById(closebutton.id).addEventListener("click", function() {
+        document.getElementById(pokediv.id).classList.add('animated');
+        document.getElementById(pokediv.id).classList.add('zoomOutLeft');
+          setTimeout(function() {
+        document.getElementById(pokediv.id).classList.add('nodisplay');
+      },500,);
+      });
+
+      spritecount++;
       // creates attribute bars
       //hp
 
@@ -283,21 +301,30 @@ function masterRelease() {
             }
           }, 750);
         }
-
-
       }, 750);
-
-
     }
   }
-
-
   newcall.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokeRequest, true);
   newcall.send();
 
+  //this calls description
+  var pokecall = new XMLHttpRequest();
+  pokecall.open("GET", "https://pokeapi.co/api/v2/pokemon-species/" + pokeRequest, true);
+  pokecall.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var pokeflavor = JSON.parse(this.responseText);
+
+      for (q = 0; q < pokeflavor.flavor_text_entries.length; q++)
+        if (pokeflavor.flavor_text_entries[q].language.name == "ja") {
+          document.getElementById('pokedesc').innerHTML = pokeflavor.flavor_text_entries[q].flavor_text;
+        }
+    }
+  }
+  pokecall.send();
+  //description done
+
 }
 
 
-function clearPoke() {
-  document.getElementById("pokelist").innerHTML = "";
-}
+
+// clear the list function

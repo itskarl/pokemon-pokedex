@@ -7,7 +7,7 @@ body {
   color: white;
   font-family: 'Rajdhani', sans-serif;
   margin: 0;
-  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("http://pre04.deviantart.net/a27c/th/pre/i/2014/073/8/f/_updated__pokeball_wallpaper_by_rushetafan-d7a42h1.jpg");
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("images/wallpaper.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,7 +54,6 @@ h1 {
 
 .professoroak {
   display: flex;
-  width: 80%;
   padding: 15px;
 }
 
@@ -190,7 +189,8 @@ h1 {
   display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
-  padding-left: 10px;
+
+  justify-content: space-between;
 }
 
 .pokediv a {
@@ -464,4 +464,28 @@ li a:hover {
   width: 90px;
   display: block;
   margin: 0 auto;
+}
+
+.closebutton {
+  position: relative;
+  padding: 10px;
+  right: 0px;
+  font-size: 2em;
+}
+
+#flavortextbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .2;
+    top: -350px;
+    font-size: 5em;
+    line-height: 1em;
+    width: 100%;
+    height: 350px;
+    text-align: justify;
+ text-justify: inter-word;
+ color: tomato;
+ z-index: 1;
 }
