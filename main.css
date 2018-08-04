@@ -219,7 +219,7 @@ h1 {
   padding: 5px;
 }
 
-#maxatk {
+.maxatk {
   background-color: rgba(200, 132, 132, 0.15);
   width: 100%;
 }
