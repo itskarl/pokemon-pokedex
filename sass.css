@@ -39,6 +39,12 @@
     height: 90px;
     margin: 0; } }
 
+@media (max-width: 500px) {
+  .pokelist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80px; } }
+
 @media (max-width: 992px) {
   .pokediv {
     height: 100%;

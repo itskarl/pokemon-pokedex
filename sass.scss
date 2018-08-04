@@ -57,13 +57,20 @@ p {
 }
 }
 
+.pokelist {
+  @media #{$tiny} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80px;
+}
+}
+
 .pokediv{
   @media #{$medium} {
   height: 100%;
   margin:0
 }
 }
-
 
 .sprites {
   @media #{$medium} {
