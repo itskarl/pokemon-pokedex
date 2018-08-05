@@ -578,7 +578,7 @@ function recallPokemon(pokeRequest) {
 // modalstuff
 
 var modal = document.getElementById('flavortextbox');
-var btn = document.getElementById("moreinfoplus");
+var btn = document.getElementById("moreinfo");
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function() {
