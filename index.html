@@ -31,11 +31,13 @@
       <div class="helpbox">
 
       </div>
-      <div class="professoroak " >
+      <div class="professoroak ">
         <input id="pokename" placeholder="enter pokemon name" onKeyDown="if(event.keyCode==13)masterRelease()" autocomplete="off" />
 
-        <img src="images/professoroak.png" class="icon" onclick="masterRelease()">
-        <img src="images/pokeball.png" class="icon" onclick="randomPoke()">
+        <button class="icon oakicon" onclick="masterRelease()">
+        </button>
+        <button class="icon pokeballicon" onclick="randomPoke()">
+        </button>
       </div>
     </div>
 
@@ -61,70 +63,86 @@
         </div>
 
         <div class="statsinfo" id="statsinfo">
+          <div id="moreinfo" class="moreinfobox">
+            <div id="moreinfoplus">
+              <p>+
+                <p>
+            </div>
+          </div>
+          <section class="allstats">
 
-          <h1 id="showname">CHOOSE YOUR POKEMON</h1>
-          <hr>
+            <h1 id="showname">CHOOSE YOUR POKEMON
+          </h1>
+        
+            <div id="intro" style="white-space:normal;">
+              <br>
+              <p>Welcome to Karl's Pokedex. Your simple, modern pokedex. Start by typing in any pokemon name or id number at the top. Don't know any pokemon names? Simply click the pokeball to get a random pokemon!</p><br>
+            </div>
 
-          <div id="intro" style="white-space:normal;">
-            <br><p>Welcome to Karl's Pokedex. Your simple, modern pokedex. Start by typing in any pokemon name or id number at the top.
-          Don't know any pokemon names? Simply click the pokeball to get a random pokemon!</p><br>
+            <div id="databars" class="nodisplay">
+              <div id="maxhp">
+                <div id="hpbar">
+                  <p id="showhp"></p>
+                </div>
+              </div>
+
+              <div id="maxatk">
+                <div id="atkbar">
+                  <p id="showatk"></p>
+                </div>
+              </div>
+
+              <div id="maxspatk">
+                <div id="spatkbar">
+                  <p id="showspatk"></p>
+                </div>
+              </div>
+
+              <div id="maxdef">
+                <div id="defbar">
+                  <p id="showdef"></p>
+                </div>
+              </div>
+
+              <div id="maxspdef">
+                <div id="spdefbar">
+                  <p id="showspdef"></p>
+                </div>
+              </div>
+
+              <div id="maxspeed">
+                <div id="speedbar">
+                  <p id="showspeed"></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <p id="showabilities"></p>
+
+          </section>
         </div>
-
-        <div id="databars" class="nodisplay">
-          <div id="maxhp">
-            <div id="hpbar">
-              <p id="showhp"></p>
-            </div>
-          </div>
-
-
-          <div id="maxatk">
-            <div id="atkbar">
-              <p id="showatk"></p>
-            </div>
-          </div>
-
-          <div id="maxspatk">
-            <div id="spatkbar">
-              <p id="showspatk"></p>
-            </div>
-          </div>
-
-          <div id="maxdef">
-            <div id="defbar">
-              <p id="showdef"></p>
-            </div>
-          </div>
-
-          <div id="maxspdef">
-            <div id="spdefbar">
-              <p id="showspdef"></p>
-            </div>
-          </div>
-
-          <div id="maxspeed">
-            <div id="speedbar">
-              <p id="showspeed"></p>
-            </div>
-          </div>
-        </div>
-          <hr>
-
-          <p id="showabilities"></p>
-        </div>
-
 
       </div>
-
-
 
 
       <div class="statsimg">
         <img id="showimg" src=""></p>
       </div>
-     <!-- <div id="flavortextbox" class="nooverflowbox">
-        <p id="pokedesc">AGGGGGG</p>
-      </div> -->
+
+
+      <div id="flavortextbox" class="flavortextbox">
+        <div class="pokedesc">
+          <span class="close">&times;</span>
+          <p></p>
+
+            <p id="pokedesc"></p>
+
+        </div>
+      </div>
+
+
+
     </div>
   </div>
 
@@ -136,14 +154,16 @@
 </body>
 <div>
   <footer>
-    <p id="outtro">Created by Karl Rodulfo for the <a href="https://nycda.com/">NYCDA </a>SEI 2018 Class with the following resources:<p>
-    <ul>
+    <p id="outtro">Created by Karl Rodulfo for the <a href="https://nycda.com/">NYCDA </a>SEI 2018 Class with the following resources:
+      <p>
+        <ul>
 
-      <li><a href="https://pokeapi.co/">POKE API</a></li>
-      <li><a href="http://pokemon.com">POKEMON.COM</a></li>
-      <li><a href="https://materializecss.com/">MATERIALIZE</a></li>
-      <li><a href="https://daneden.github.io/animate.css/">ANIMATE.CSS</a></li>
-    </ul>
+          <li><a href="https://pokeapi.co/">POKE API</a></li>
+          <li><a href="http://pokemon.com">POKEMON.COM</a></li>
+          <li><a href="https://materializecss.com/">MATERIALIZE</a></li>
+          <li><a href="https://daneden.github.io/animate.css/">ANIMATE.CSS</a></li>
+        </ul>
   </footer>
 </div>
+
 </html>

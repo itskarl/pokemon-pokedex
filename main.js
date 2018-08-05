@@ -1,5 +1,6 @@
 console.log("Gotta Catch Em' All!!!")
 
+cancel = false
 
 setTimeout(function() {
   document.getElementById('oakbox').classList.remove('hidden');
@@ -114,6 +115,7 @@ function masterRelease() {
       pokediv.appendChild(pokename);
 
       // the close button
+
       var closebutton = document.createElement('div');
       var xbtn = document.createTextNode('\xD7');
       closebutton.appendChild(xbtn);
@@ -124,12 +126,14 @@ function masterRelease() {
       pokediv.id = "pokediv" +spritecount;
 
       document.getElementById(closebutton.id).addEventListener("click", function() {
+        cancel = true;
         document.getElementById(pokediv.id).classList.add('animated');
         document.getElementById(pokediv.id).classList.add('zoomOutLeft');
           setTimeout(function() {
         document.getElementById(pokediv.id).classList.add('nodisplay');
       },500,);
       });
+      cancel = false;
 
       document.getElementById(pokediv.id).addEventListener("click", function() {
         recallPokemon(pokeRequest);
@@ -193,8 +197,8 @@ function masterRelease() {
       document.getElementById('yourpokemon').classList.add('fadeIn');
 
       //this section prints out pokemon types
-
       //the slidedown animation
+
       document.getElementById('typebox1').classList.add('expanddown');
 
       setTimeout(function() {
@@ -325,7 +329,7 @@ function masterRelease() {
       var pokeflavor = JSON.parse(this.responseText);
 
       for (q = 0; q < pokeflavor.flavor_text_entries.length; q++)
-        if (pokeflavor.flavor_text_entries[q].language.name == "ja") {
+        if (pokeflavor.flavor_text_entries[q].language.name == "en") {
           document.getElementById('pokedesc').innerHTML = pokeflavor.flavor_text_entries[q].flavor_text;
         }
     }
@@ -335,23 +339,18 @@ function masterRelease() {
 
 }
 
+// when pushing the DOM created sprites...
+
 function recallPokemon(pokeRequest) {
 
-  // this sets input from input "pokename" to pokeRequest
+  if (cancel == false){
+
   masterPokemon(pokeRequest);
 
   var newcall = new XMLHttpRequest();
   newcall.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var pokeinfo = JSON.parse(this.responseText);
-
-      //clear the intro
-
-      setTimeout(function() {
-        document.getElementById('intro').innerHTML = "";
-        document.getElementById('databars').classList.remove('nodisplay');
-      }, 1500);
-
 
       // this prints all the data
 
@@ -562,15 +561,33 @@ function recallPokemon(pokeRequest) {
       var pokeflavor = JSON.parse(this.responseText);
 
       for (q = 0; q < pokeflavor.flavor_text_entries.length; q++)
-        if (pokeflavor.flavor_text_entries[q].language.name == "ja") {
+        if (pokeflavor.flavor_text_entries[q].language.name == "en") {
           document.getElementById('pokedesc').innerHTML = pokeflavor.flavor_text_entries[q].flavor_text;
         }
     }
   }
   pokecall.send();
   //description done
-
+}
 }
 
 
-// clear the list function
+// modalstuff
+
+var modal = document.getElementById('flavortextbox');
+var btn = document.getElementById("moreinfo");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
