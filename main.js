@@ -146,6 +146,7 @@ function masterRelease() {
       });
 
       spritecount++;
+
       // creates attribute bars
       //hp
 
@@ -157,6 +158,8 @@ function masterRelease() {
         document.getElementById("defbar").style.width = ((pokeinfo.stats[3].base_stat / 200) * 100) + "%";
         document.getElementById("spdefbar").style.width = ((pokeinfo.stats[1].base_stat / 200) * 100) + "%";
         document.getElementById("speedbar").style.width = ((pokeinfo.stats[0].base_stat / 160) * 100) + "%";
+        //and lets show that + sign button.
+        document.getElementById('moreinfo').classList.remove('hidden');
 
       }, 1500);
 
@@ -575,7 +578,7 @@ function recallPokemon(pokeRequest) {
 // modalstuff
 
 var modal = document.getElementById('flavortextbox');
-var btn = document.getElementById("moreinfo");
+var btn = document.getElementById("moreinfoplus");
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function() {
