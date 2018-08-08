@@ -76,7 +76,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 10px;
     height: 1px;
-    box-shadow: 0 -2px 0 rgba(200, 200, 200, 0.7); } }
+    box-shadow: 0 -2px 0 #c8c8c8; } }
 
 @media (max-width: 500px) {
   .div3 {
@@ -97,7 +97,7 @@
   .statsimg {
     position: relative;
     left: 38%;
-    top: -250px;
+    top: -300px;
     z-index: 3; } }
 
 @media (max-width: 500px) {
@@ -116,7 +116,8 @@
     font-size: 12px;
     width: 50%;
     line-height: 12px;
-    box-shadow: none; } }
+    box-shadow: none;
+    margin: 0 0 0 5px; } }
 
 @media (max-width: 500px) {
   .pokedesc {
