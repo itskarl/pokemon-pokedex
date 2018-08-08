@@ -1,4 +1,4 @@
-console.log("Gotta Catch Em' All!")
+console.log("Gotta Catch Em' All!!")
 
 cancel = false
 
