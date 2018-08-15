@@ -156,10 +156,12 @@ h1 {
   color: #ddeaff;
 }
 
-.pokediv:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  transition-duration: .2s;
+.pokediv:hover{
+  transition-duration: 5s;
   cursor: pointer;
+  background: radial-gradient(transparent, black), url('http://img03.deviantart.net/652f/i/2012/195/9/6/pokeball_updated___abstract_art_by_empyral-d5798g4.jpg');
+  background-position: center;
+  background-size: cover
 }
 
 #maxhp {

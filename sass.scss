@@ -135,7 +135,7 @@ p {
   @media #{$tiny} {
     position: relative;
     left: 38%;
-    top: -300px;
+    top: -250px;
     z-index: 3;
   }
 }
@@ -163,6 +163,7 @@ p {
     line-height: 12px;
     box-shadow: none;
     margin: 0 0 0 5px;
+    top: 0px;
   }
 }
 
@@ -170,6 +171,15 @@ p {
   @media #{$tiny} {
     font-size: 1.3em;
     width: 80%;
+    padding: 10px;
+
+  }
+}
+
+#pokedesc{
+  @media #{$tiny} {
+    padding: 10px 0 0 0;
+    margin: 0 0 10px 10px;
 
   }
 }
