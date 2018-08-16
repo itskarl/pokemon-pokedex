@@ -1,5 +1,3 @@
-![Bulba!](http://vignette4.wikia.nocookie.net/monstermovies/images/7/77/Bulbasaur_by_Xous54.png/revision/latest/scale-to-width-down/185?cb=20120720155936)
-
 # POKEMON POKEDEX PROJECT
 
 _Please Note: This site purely reliant on the PokeAPI to function correctly. The API is often slow or occasionally down, which may affect this pokedex's functionality. Check [Poke API](http://pokeapi.co) for resource status._
@@ -17,6 +15,9 @@ HTML, CSS, JAVSASCRIPT, SASS
 
 ### FEATURES
 Fun things to note:
+
+![desktop](images/desktop.png)
+![desktop](images/mobile.png)
 
 - Website is fully responsive for desktop, tablet, and mobile! Please enjoy on different platforms!
 - Stat bars are dynamically generated as percentage bars
