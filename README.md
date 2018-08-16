@@ -1,5 +1,7 @@
 # POKEMON POKEDEX PROJECT
 
+![desktop](images/demo.gif)
+
 _Please Note: This site purely reliant on the PokeAPI to function correctly. The API is often slow or occasionally down, which may affect this pokedex's functionality. Check [Poke API](http://pokeapi.co) for resource status._
 
 ### DESCRIPTION
