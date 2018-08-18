@@ -7,19 +7,19 @@ _Please Note: This site purely reliant on the PokeAPI to function correctly. The
 ### DESCRIPTION
 Gotta Catch 'Em All!
 
-This project is a novel web app that allows you to visualize Pokemon data in a fun and dynamic way. This project was an exercise in utilizing javascript API calls and DOM methods on a single page.
+Assignment: To design and create a novel web app that allows you to visualize Pokemon data in a fun and dynamic way. This project was an exercise in utilizing javascript API calls and DOM methods on a single page.
 
 ### DESIGN
 I created this site as a very modern pokedex but still pays an homage to the original games and style. The red and white patterns and shapes are a nod to the iconic pokeball. The animation style was chosen to give the site a slight mechanical/analog feel.
 
 ### LANGUAGES USED
-HTML, CSS, JAVSASCRIPT, SASS
+HTML, CSS, JAVSASCRIPT, SASS, AJAX
 
 ### FEATURES
 Fun things to note:
 
 ![desktop](images/desktop.png)
-![desktop](images/mobile.png)
+![mobile](images/mobile.png)
 
 - Website is fully responsive for desktop, tablet, and mobile! Please enjoy on different platforms!
 - Stat bars are dynamically generated as percentage bars
