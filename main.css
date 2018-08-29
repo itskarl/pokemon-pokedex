@@ -23,6 +23,10 @@ body {
   float: left;
 }
 
+.content-box {
+  height: calc(100vh - 102px)
+}
+
 h1 {
   font-size: 1em;
   margin: 0px;
@@ -350,6 +354,8 @@ ul {
   border-top: 2px solid rgb(130, 130, 130, 0.4);
   opacity: .7;
   margin-top: 0;
+  display: flex;
+    justify-content: center;
 }
 
 li a, li p {
@@ -369,13 +375,14 @@ li a:hover {
 
 #outtro {
   font-size: .8em;
-  line-height: .9em;
-  text-align: left;
+  line-height: 2em;
+  text-align: center;
   opacity: .7;
-  padding: 5% 0 0 16px;
-  position: relative;
-  margin-bottom: 5px;
+  padding: 0;
+  margin-bottom: -2px;
 }
+
+
 
 .helpbox {
   height: 100px;
