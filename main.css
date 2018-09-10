@@ -107,6 +107,7 @@ h1 {
   position: relative;
   left: 33%;
   top: -380px;
+  height: 0px;
 }
 
 .statsimg img {
