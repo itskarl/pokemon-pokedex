@@ -16,7 +16,7 @@ masterList = []
 
 function masterPokemon(idNumber) {
 
-  let apiLink = "https://pokeapi.co/api/v2/pokemon/" + idNumber;
+  let apiLink = "http://fizal.me/pokeapi/api/" + idNumber +".json";
 
   var newcall = new XMLHttpRequest();
   newcall.onreadystatechange = function() {
@@ -321,7 +321,7 @@ function masterRelease() {
       }, 750);
     }
   }
-  newcall.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokeRequest, true);
+  newcall.open("GET", "http://fizal.me/pokeapi/api/" + pokeRequest + ".json", true);
   newcall.send();
 
   //this calls description
@@ -553,12 +553,12 @@ function recallPokemon(pokeRequest) {
       }, 750);
     }
   }
-  newcall.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokeRequest, true);
+  newcall.open("GET", "http://fizal.me/pokeapi/api/" + pokeRequest + ".json", true);
   newcall.send();
 
   //this calls description
   var pokecall = new XMLHttpRequest();
-  pokecall.open("GET", "https://pokeapi.co/api/v2/pokemon-species/" + pokeRequest, true);
+  pokecall.open("GET", "http://fizal.me/pokeapi/api/" + pokeRequest + ".json", true);
   pokecall.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var pokeflavor = JSON.parse(this.responseText);
