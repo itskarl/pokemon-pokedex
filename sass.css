@@ -51,6 +51,16 @@
     margin: 0; } }
 
 @media (max-width: 992px) {
+  .pokediv {
+    height: 45px;
+    margin: 0; } }
+
+@media (max-width: 500px) {
+  .pokediv {
+    height: 40px;
+    margin: 0; } }
+
+@media (max-width: 992px) {
   .sprites {
     width: 30px; } }
 
@@ -91,7 +101,17 @@
 
 @media (max-width: 992px) {
   .statsimg img {
-    max-width: 400px; } }
+    max-width: 400px;
+    position: relative;
+    left: calc(50% - 200px); } }
+
+@media (max-width: 992px) {
+  #databars p {
+    font-size: 12px; } }
+
+@media (max-width: 992px) {
+  #showabilities {
+    font-size: 12px; } }
 
 @media (max-width: 500px) {
   .statsimg {
@@ -102,14 +122,30 @@
 
 @media (max-width: 500px) {
   .statsimg img {
-    max-width: 250px; } }
+    max-width: 250px;
+    position: relative;
+    left: calc(50% - 170px); } }
+
+@media (max-width: 992px) {
+  .pokediv {
+    border-style: none;
+    background-color: rgba(41, 66, 122, 0.4); } }
 
 @media (max-width: 992px) {
   .statsinfo {
     width: 40%;
     position: relative;
-    top: -30px;
+    top: -20px;
     line-height: 12px; } }
+
+@media (max-width: 992px) {
+  .statsinfo p {
+    font-size: 14px; } }
+
+@media (max-width: 992px) {
+  #databars {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0px; } }
 
 @media (max-width: 500px) {
   .statsinfo {
@@ -117,8 +153,7 @@
     width: 50%;
     line-height: 12px;
     box-shadow: none;
-    margin: 0 0 0 5px;
-    top: 0px; } }
+    top: -20px; } }
 
 @media (max-width: 500px) {
   .pokedesc {
