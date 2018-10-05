@@ -1,5 +1,6 @@
 html {
   overflow-x: hidden;
+  min-height: 100vh;
 }
 body {
   color: white;
@@ -15,7 +16,6 @@ body {
   background-repeat: no-repeat;
   background-clip: initial;
   line-height: 1em;
-  width:auto;
 
 }
 
