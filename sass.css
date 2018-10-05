@@ -1,27 +1,18 @@
 @media (min-width: 993px) {
   p {
-    font-size: 0.9em;
-  }
-}
-
+    font-size: 0.9em; } }
 @media (max-width: 992px) {
   p {
-    font-size: 0.7em;
-  }
-}
+    font-size: 0.7em; } }
 
 @media (max-width: 992px) {
   .trainername {
-    margin: 10px 5px 15px 20px;
-  }
-}
+    margin: 10px 5px 15px 20px; } }
 
 @media (max-width: 992px) {
   .pokeball {
     height: 30px;
-    width: 30px;
-  }
-}
+    width: 30px; } }
 
 @media (max-width: 992px) {
   .div2 {
@@ -30,94 +21,54 @@
     height: 100%;
     transition-duration: 1s;
     overflow-x: hidden;
-    overflow-y: scroll;
-  }
-}
+    overflow-y: scroll; } }
 
 @media (max-width: 992px) {
   #yourpokemon {
-    display: none;
-  }
-}
+    display: none; } }
 
 @media (max-width: 992px) {
   .div2 div {
     transition-duration: 1s;
-    z-index: 6;
-  }
-}
+    z-index: 6; } }
 
 @media (max-width: 992px) {
   .pokelist {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 90px;
-    margin: 0;
-  }
-}
+    margin: 0; } }
 
 @media (max-width: 500px) {
   .pokelist {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 80px;
-  }
-}
+    height: 80px; } }
 
 @media (max-width: 992px) {
   .pokediv {
-    height: 45px;
-    margin: 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .pokediv {
-    height: 40px;
-    margin: 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .pokediv {
-    height: 40px;
-    margin: 0;
-  }
-}
-
-@media (max-width: 500px) {
-  footer {
-    padding-top: 40px;
-  }
-}
+    height: 100%;
+    margin: 0; } }
 
 @media (max-width: 992px) {
   .sprites {
-    width: 30px;
-  }
-}
+    width: 30px; } }
 
 @media (max-width: 992px) {
   .div1 {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  }
-}
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); } }
 
 @media (max-width: 500px) {
   .div1 {
-    border-bottom-left-radius: 0;
-  }
-}
+    border-bottom-left-radius: 0; } }
 
 @media (max-width: 500px) {
   .div2 {
     border-top-right-radius: 20px;
     border-top-left-radius: 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
-  }
-}
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7); } }
 
 @media (max-width: 992px) {
   .div3 {
@@ -125,55 +76,40 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 10px;
     height: 1px;
-    box-shadow: 0 -2px 0 #c8c8c8;
-  }
-}
+    box-shadow: 0 -2px 0 #c8c8c8; } }
 
 @media (max-width: 500px) {
   .div3 {
-    border-bottom-left-radius: 0;
-  }
-}
+    border-bottom-left-radius: 0; } }
 
 @media (max-width: 992px) {
   .statsimg {
     position: relative;
-    left: calc(50% - 100px);
+    left: 30%;
     top: -350px;
-    z-index: 3;
-    left: calc(50% - 100px)
-  }
-}
+    z-index: 3; } }
 
 @media (max-width: 992px) {
   .statsimg img {
-    max-width: 400px;
-  }
-}
+    max-width: 400px; } }
 
 @media (max-width: 500px) {
   .statsimg {
     position: relative;
-    left: calc(50% - 25px);
+    left: 38%;
     top: -250px;
-    z-index: 3;
-  }
-}
+    z-index: 3; } }
 
 @media (max-width: 500px) {
   .statsimg img {
-    max-width: 250px;
-  }
-}
+    max-width: 250px; } }
 
 @media (max-width: 992px) {
   .statsinfo {
     width: 40%;
     position: relative;
     top: -30px;
-    line-height: 12px;
-  }
-}
+    line-height: 12px; } }
 
 @media (max-width: 500px) {
   .statsinfo {
@@ -181,64 +117,40 @@
     width: 50%;
     line-height: 12px;
     box-shadow: none;
-    margin: 0px;
-    top: -20px
-  }
-}
-
-@media (max-width: 992px) {
-  .statsinfo p{
-    line-height: .9em;
-    font-size: 13px;
-
-  }
-}
+    margin: 0 0 0 5px;
+    top: 0px; } }
 
 @media (max-width: 500px) {
   .pokedesc {
     font-size: 1.3em;
     width: 80%;
-    padding: 10px;
-  }
-}
+    padding: 10px; } }
 
 @media (max-width: 500px) {
   #pokedesc {
     padding: 10px 0 0 0;
-    margin: 0 0 10px 10px;
-  }
-}
+    margin: 0 0 10px 10px; } }
 
 @media (max-width: 500px) {
   .flavortextbox {
-    top: 35%;
-  }
-}
+    top: 35%; } }
 
 @media (max-width: 992px) {
   .div2 div {
-    box-shadow: 0;
-  }
-}
+    box-shadow: 0; } }
 
 @media (max-width: 992px) {
   .button2:hover {
-    border-top-right-radius: 20px;
-  }
-}
+    border-top-right-radius: 20px; } }
 
 @media (max-width: 992px) {
   .button2 {
-    border-top-right-radius: 30px;
-  }
-}
+    border-top-right-radius: 30px; } }
 
 @media (max-width: 500px) {
   .container {
     margin: 0;
-    width: 97%;
-  }
-}
+    width: 97%; } }
 
 .formbox {
   background: rgba(100, 40, 28, 0.7);
@@ -252,49 +164,35 @@
   padding: 0 15px;
   border-bottom-right-radius: 20px;
   box-shadow: 2px 2px 2px black;
-  z-index: 2;
-}
+  z-index: 2; }
 
 @media (max-width: 992px) {
   .professoroak {
-    margin-top: 10px;
-  }
-}
+    margin-top: 10px; } }
 
 .formbox input {
   color: white;
-  height: 2em;
-}
+  height: 2em; }
 
 @media (max-width: 992px) {
   .formbox {
-    border-bottom-left-radius: 20px;
-  }
-}
+    border-bottom-left-radius: 20px; } }
 
 @media (max-width: 500px) {
   .formbox {
-    border-bottom-left-radius: 0;
-  }
-}
+    border-bottom-left-radius: 0; } }
 
 @media (max-width: 500px) {
   #outtro {
-    font-size: 0.6em;
-  }
-}
+    font-size: 0.6em; } }
 
 @media (max-width: 500px) {
   li {
-    font-size: 0.8em;
-  }
-}
+    font-size: 0.8em; } }
 
 @media (max-width: 500px) {
   .formbox input {
-    font-size: 1em;
-  }
-}
+    font-size: 1em; } }
 
 @media (max-width: 992px) {
   #typebox1 {
@@ -304,17 +202,13 @@
     position: relative;
     left: 5px;
     padding: 4px;
-    box-shadow: 1px 1px 4px black;
-  }
-}
+    box-shadow: 1px 1px 4px black; } }
 
 @media (max-width: 992px) {
   #typebox1 img {
     width: 70px;
     display: block;
-    margin: 0 auto;
-  }
-}
+    margin: 0 auto; } }
 
 @media (max-width: 992px) {
   #typebox2 {
@@ -325,16 +219,12 @@
     padding: 4px;
     left: 90px;
     top: -40px;
-    box-shadow: 1px 1px 3px black;
-  }
-}
+    box-shadow: 1px 1px 3px black; } }
 
 @media (max-width: 992px) {
   #typebox2 img {
     width: 70px;
     display: block;
-    margin: 0 auto;
-  }
-}
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=sass.css.map */
