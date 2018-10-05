@@ -137,8 +137,8 @@ h1 {
 
 .statsinfo p {
   margin: 0px;
-  line-height: 16px;
-  font-size: 1em;
+  line-height: 1.15em;
+  font-size: 14px;
 }
 
 .pokelist {
