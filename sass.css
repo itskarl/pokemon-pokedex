@@ -103,7 +103,7 @@
   .statsimg img {
     max-width: 400px;
     position: relative;
-    left: calc(50% - 200px); } }
+    left: 50%; } }
 
 @media (max-width: 992px) {
   #databars p {
@@ -124,7 +124,7 @@
   .statsimg img {
     max-width: 250px;
     position: relative;
-    left: calc(50% - 170px); } }
+    left: 50%; } }
 
 @media (max-width: 992px) {
   .pokediv {

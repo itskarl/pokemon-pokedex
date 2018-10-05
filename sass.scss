@@ -143,7 +143,7 @@ p {
   @media #{$medium} {
     max-width: 400px;
     position: relative;
-    left: calc(50% - 200px);
+    left: 50%;
   }
 
 }
@@ -175,7 +175,7 @@ p {
   @media #{$tiny} {
     max-width: 250px;
     position: relative;
-    left: calc(50% - 170px);
+    left: 50%;
   }
 }
 
