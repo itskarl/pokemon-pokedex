@@ -2,6 +2,7 @@ html {
   overflow-x: hidden;
   min-height: 100vh;
 }
+
 body {
   color: white;
   font-family: 'Abel', sans-serif;
@@ -16,7 +17,6 @@ body {
   background-repeat: no-repeat;
   background-clip: initial;
   line-height: 1em;
-
 }
 
 .allcontent {
@@ -24,6 +24,7 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
 .trainername {
   font-size: 1.4em;
   margin: 20% 5px 15px 20px;
@@ -50,7 +51,6 @@ h1 {
 .pokeball:hover {
   transform: translateY(1px) rotate(360deg) scale(1.3, 1.3);
 } */
-
 .div1 {
   background-color: rgba(80, 80, 80);
   box-shadow: 1px 1px 20px black;
@@ -126,18 +126,18 @@ h1 {
 }
 
 .statsinfo {
-    font-size: 1.15em;
-    background: rgba(10, 15, 25, 0.55);
-    z-index: 4;
-    border-radius: 0px 25px 25px 0px;
-    border-top-right-radius: 25px;
-    width: 250px;
-    position: relative;
-    left: 0;
-    top: -40px;
-    transition-duration: .5s;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.84);
-    margin: 0;
+  font-size: 1.15em;
+  background: rgba(10, 15, 25, 0.55);
+  z-index: 4;
+  border-radius: 0px 25px 25px 0px;
+  border-top-right-radius: 25px;
+  width: 250px;
+  position: relative;
+  left: 0;
+  top: -40px;
+  transition-duration: .5s;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.84);
+  margin: 0;
 }
 
 .statsinfo p {
@@ -170,10 +170,10 @@ h1 {
   color: #ddeaff;
 }
 
-.pokediv:hover{
+.pokediv:hover {
   transition-duration: 2s;
   cursor: pointer;
-  background: radial-gradient(transparent,black), url('images/pokeballwallpaper.png');
+  background: radial-gradient(transparent, black), url('images/pokeballwallpaper.png');
   background-position: center;
   background-size: cover
 }
@@ -294,9 +294,11 @@ h1 {
   0% {
     left: 0px;
   }
+
   50% {
     left: -300px;
   }
+
   100% {
     left: 0px;
   }
@@ -312,9 +314,11 @@ h1 {
   0% {
     top: 0px;
   }
+
   50% {
     top: -50px;
   }
+
   100% {
     top: 0px;
   }
@@ -330,9 +334,11 @@ h1 {
   0% {
     top: -50px;
   }
+
   50% {
     top: -100px;
   }
+
   100% {
     top: -50px;
   }
@@ -353,10 +359,6 @@ h1 {
   opacity: 0;
 }
 
-.nodisplay {
-  display: none;
-}
-
 ul {
   list-style-type: none;
   z-index: 4;
@@ -366,7 +368,7 @@ ul {
   opacity: .7;
   margin-top: 0;
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 
 li a, li p {
@@ -392,8 +394,6 @@ li a:hover {
   padding: 0;
   margin-bottom: -2px;
 }
-
-
 
 .helpbox {
   height: 100px;
@@ -447,7 +447,6 @@ li a:hover {
 }
 
 /* modal HERE */
-
 .flavortextbox {
   display: none;
   /* Hidden by default */
@@ -496,7 +495,6 @@ li a:hover {
 
 /*
 modal ends */
-
 .moreinfobox {
   width: 100%;
   display: flex;
@@ -518,6 +516,14 @@ modal ends */
   justify-content: center;
   font-size: 1.5em;
   box-shadow: -1px 1px 2px black;
+  /* THIS IS UNTIL POKEAPI IS BACK UP! */
+  /* THIS IS UNTIL POKEAPI IS BACK UP! */
+  /* THIS IS UNTIL POKEAPI IS BACK UP! */
+  /* THIS IS UNTIL POKEAPI IS BACK UP! */
+  opacity: 0
+    /* THIS IS UNTIL POKEAPI IS BACK UP! */
+    /* THIS IS UNTIL POKEAPI IS BACK UP! */
+    /* THIS IS UNTIL POKEAPI IS BACK UP! */
 }
 
 #moreinfoplus:hover {
@@ -582,7 +588,10 @@ modal ends */
 }
 
 footer {
-
   position: relative;
   top: 20px;
+}
+
+.nodisplay {
+  display: none !important;
 }

@@ -135,7 +135,7 @@
   .statsinfo {
     width: 40%;
     position: relative;
-    top: -20px;
+    top: -30px;
     line-height: 12px; } }
 
 @media (max-width: 992px) {
@@ -144,13 +144,13 @@
 
 @media (max-width: 992px) {
   #databars {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 0px; } }
 
 @media (max-width: 500px) {
   .statsinfo {
     font-size: 12px;
-    width: 50%;
+    width: 45%;
     line-height: 12px;
     box-shadow: none;
     top: -30px; } }
@@ -261,5 +261,9 @@
     width: 70px;
     display: block;
     margin: 0 auto; } }
+
+@media (max-width: 992px) {
+  #oakbox {
+    height: 75px; } }
 
 /*# sourceMappingURL=sass.css.map */

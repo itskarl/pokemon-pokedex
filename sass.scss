@@ -191,7 +191,7 @@ p {
   @media #{$medium} {
     width: 40%;
     position: relative;
-    top: -20px;
+    top: -30px;
     line-height: 12px;
 
   }
@@ -206,7 +206,7 @@ p {
 
 #databars {
   @media #{$medium} {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 0px;
   }
 }
@@ -214,7 +214,7 @@ p {
 .statsinfo {
   @media #{$tiny} {
     font-size: 12px;
-    width: 50%;
+    width: 45%;
     line-height: 12px;
     box-shadow: none;
     top: -30px;
@@ -379,5 +379,11 @@ li {
     width: 70px;
     display: block;
     margin: 0 auto;
+  }
+}
+
+#oakbox {
+  @media #{$medium} {
+    height: 75px
   }
 }
