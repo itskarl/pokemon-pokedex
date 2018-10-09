@@ -85,7 +85,7 @@
     border-top-right-radius: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 10px;
-    height: 1px;
+    height: 330px;
     box-shadow: 0 -2px 0 #c8c8c8; } }
 
 @media (max-width: 500px) {
@@ -117,7 +117,7 @@
   .statsimg {
     position: relative;
     left: 38%;
-    top: -250px;
+    top: -300px;
     z-index: 3; } }
 
 @media (max-width: 500px) {
