@@ -67,6 +67,22 @@ h1 {
 .professoroak {
   display: flex;
   padding: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+.professoroak input {
+  margin: 0 10px 0 0 !important;
+}
+.professoroak div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+  align-items: center;
+}
+.professoroak p {
+  margin: 0;
+  font-size: .7em;
+  margin-top: 5px;
 }
 
 .div2 {
@@ -101,6 +117,9 @@ h1 {
   border-bottom-style: solid;
 }
 
+#pokename {
+  margin-right: 5px;
+}
 .div3 {
   border-radius: 0 30px 30px 0;
   background-color: rgba(100, 39, 28, 0.8);
@@ -117,6 +136,7 @@ h1 {
   top: -380px;
   height: 0px;
   width: 0;
+  height: 0;
 }
 
 .statsimg img {
@@ -454,7 +474,7 @@ li a:hover {
   /* Stay in place */
   z-index: 15;
   /* Sit on top */
-  padding-top: 100px;
+  padding-top: 35vh;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -463,12 +483,11 @@ li a:hover {
   height: 100%;
   /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
-  /* background-color: rgba(0,0,0,0.4);  */
 }
 
 .pokedesc {
-  background-color: rgba(63, 63, 163, .85);
+  background: rgba(90, 88, 192, 0.96);
+  box-shadow: 0 8px 10px 10px #0000005e;
   font-size: 1.5em;
   line-height: 1.5em;
   margin: auto;
@@ -505,12 +524,11 @@ modal ends */
 }
 
 #moreinfoplus {
-  background-color: rgba(200, 40, 40, 0.7);
+  background-color: rgb(149, 54, 54);
   z-index: 10px;
   width: 35px;
   height: 35px;
-  border-top-right-radius: 25px;
-  border-bottom-left-radius: 5px;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -520,7 +538,7 @@ modal ends */
   /* THIS IS UNTIL POKEAPI IS BACK UP! */
   /* THIS IS UNTIL POKEAPI IS BACK UP! */
   /* THIS IS UNTIL POKEAPI IS BACK UP! */
-  opacity: 0
+  opacity: 1
     /* THIS IS UNTIL POKEAPI IS BACK UP! */
     /* THIS IS UNTIL POKEAPI IS BACK UP! */
     /* THIS IS UNTIL POKEAPI IS BACK UP! */
@@ -569,7 +587,7 @@ modal ends */
 
 .pokeballicon {
   background-image: url(images/pokeball.png);
-  background-size: 30px 30px;
+  background-size: 28px 28px;
   background-repeat: no-repeat;
   background-position: center center;
 }

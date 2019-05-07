@@ -34,12 +34,19 @@
 
       </div>
       <div class="professoroak ">
-        <input id="pokename" placeholder="enter pokemon ID no." onKeyDown="if(event.keyCode==13)masterRelease()" autocomplete="off" />
+        <input id="pokename" placeholder="pokemon name or id #" onKeyDown="if(event.keyCode==13)masterRelease()" autocomplete="off" />
 
-        &nbsp;<button class="icon oakicon" onclick="masterRelease()">
-        </button> &nbsp;&nbsp;
-        <button class="icon pokeballicon" onclick="randomPoke()">
-        </button>
+        &nbsp;
+        <div>
+          <button class="icon oakicon" onclick="masterRelease()">
+          </button>
+        <p>search</p>
+        </div>
+        <div>
+          <button class="icon pokeballicon" onclick="randomPoke()">
+          </button>
+          <p>random</p>
+        </div>
       </div>
     </div>
 
@@ -80,7 +87,8 @@
 
             <div id="intro" style="white-space:normal;">
 
-              <p>Welcome to Karl's Pokedex: your simple, modern pokedex. Start by typing in any pokemon id number (1 - 802) at the top. Or simply click the pokeball to get a random pokemon!</p><br>
+              <p>Start by typing in any pokemon name or id number (1 - 802) at the top. Or simply click the pokeball to get a random pokemon!</p><br>
+              <span style="color: #7171ff; margin-top: 10px; cursor: pointer" onclick="randomPoke()">START! (Random Pokemon)</span>
             </div>
 
 

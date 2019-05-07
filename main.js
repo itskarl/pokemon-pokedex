@@ -1,4 +1,4 @@
-console.log("Gotta Catch Em' All!!")
+console.log("Gotta Catch Emmmmm' All!!")
 
 cancel = false
 
@@ -16,7 +16,7 @@ masterList = []
 
 function masterPokemon(idNumber) {
 
-  let apiLink = "https://fizal.me/pokeapi/api/" + idNumber +".json";
+  let apiLink = "https://pokeapi.co/api/v2/pokemon/" + idNumber;
 
   var newcall = new XMLHttpRequest();
   newcall.onreadystatechange = function() {
@@ -321,7 +321,7 @@ function masterRelease() {
       }, 750);
     }
   }
-  newcall.open("GET", "https://fizal.me/pokeapi/api/" + pokeRequest + ".json", true);
+  newcall.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokeRequest, true);
   newcall.send();
 
   //this calls description
@@ -553,12 +553,12 @@ function recallPokemon(pokeRequest) {
       }, 750);
     }
   }
-  newcall.open("GET", "https://fizal.me/pokeapi/api/" + pokeRequest + ".json", true);
+  newcall.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokeRequest, true);
   newcall.send();
 
   //this calls description
   var pokecall = new XMLHttpRequest();
-  pokecall.open("GET", "https://fizal.me/pokeapi/api/" + pokeRequest + ".json", true);
+  pokecall.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokeRequest, true);
   pokecall.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var pokeflavor = JSON.parse(this.responseText);

@@ -3,7 +3,8 @@
     font-size: 0.9em; } }
 @media (max-width: 992px) {
   p {
-    font-size: 0.7em; } }
+    font-size: 0.8em;
+    line-height: 1.1em; } }
 
 @media (max-width: 992px) {
   .trainername {
