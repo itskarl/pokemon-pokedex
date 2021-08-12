@@ -25,7 +25,7 @@ function masterPokemon(idNumber) {
 
       let Pokemon = {
         name: pokeinfo.name,
-        hp: pokeinfo.stats[5].base_stat,
+        hp: pokeinfo.stats[0].base_stat,
         attack: pokeinfo.stats[4].base_stat,
         ability: pokeinfo.abilities[0].ability.name,
         id: pokeinfo.id,
@@ -78,12 +78,12 @@ function masterRelease() {
       setTimeout(function() {
 
         document.getElementById("showname").innerHTML = pokeinfo.name.toUpperCase() + "  (#" + pokeinfo.id + ")";
-        document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[5].base_stat;
+        document.getElementById("showhp").innerHTML = " HP: " + pokeinfo.stats[0].base_stat;
         document.getElementById("showatk").innerHTML = " ATTACK: " + pokeinfo.stats[4].base_stat;
         document.getElementById("showspatk").innerHTML = " SP.ATK: " + pokeinfo.stats[2].base_stat;
         document.getElementById("showdef").innerHTML = " DEFENSE: " + pokeinfo.stats[3].base_stat;
         document.getElementById("showspdef").innerHTML = " SP.DEF: " + pokeinfo.stats[1].base_stat;
-        document.getElementById("showspeed").innerHTML = " SPEED " + pokeinfo.stats[0].base_stat;
+        document.getElementById("showspeed").innerHTML = " SPEED " + pokeinfo.stats[5].base_stat;
 
         //this sees the number of abilities and prints available number of abilities
 
