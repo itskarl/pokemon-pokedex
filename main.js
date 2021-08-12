@@ -152,12 +152,12 @@ function masterRelease() {
 
       setTimeout(function() {
 
-        document.getElementById("hpbar").style.width = ((pokeinfo.stats[5].base_stat / 250) * 100) + "%";
+        document.getElementById("hpbar").style.width = ((pokeinfo.stats[0].base_stat / 250) * 100) + "%";
         document.getElementById("atkbar").style.width = ((pokeinfo.stats[4].base_stat / 181) * 100) + "%";
         document.getElementById("spatkbar").style.width = ((pokeinfo.stats[2].base_stat / 173) * 100) + "%";
         document.getElementById("defbar").style.width = ((pokeinfo.stats[3].base_stat / 230) * 100) + "%";
         document.getElementById("spdefbar").style.width = ((pokeinfo.stats[1].base_stat / 230) * 100) + "%";
-        document.getElementById("speedbar").style.width = ((pokeinfo.stats[0].base_stat / 160) * 100) + "%";
+        document.getElementById("speedbar").style.width = ((pokeinfo.stats[5].base_stat / 160) * 100) + "%";
         //and lets show that + sign button.
         document.getElementById('moreinfo').classList.remove('hidden');
 
